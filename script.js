@@ -21,10 +21,9 @@ const solutionText = document.getElementById("solution");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const questionProgress = document.getElementById("question-progress");
-
 const homeBtn = document.getElementById("home-btn");
 
-homeBtn.addEventListener("click", function () {
+homeBtn.addEventListener("click", () => {
     // Go back to the home page - Show the selection section and hide the questions/chapter sections
     document.getElementById("selection-section").classList.remove("hidden");
     chaptersSection.classList.add("hidden");
@@ -70,7 +69,7 @@ function showChapterList(branch, semester) {
     chaptersSection.classList.remove("hidden");
     chaptersList.innerHTML = '';
 
-    chapters.forEach((chapter) => {
+    chapters.forEach(chapter => {
         const li = document.createElement("li");
         li.textContent = chapter;
         li.classList.add("p-2", "cursor-pointer", "hover:bg-gray-200", "rounded");
@@ -96,33 +95,40 @@ function loadQuestions(branch, semester, chapter) {
 
 // Display the current question
 function displayQuestion() {
-    const question = currentQuestions[currentQuestionIndex];
-    questionProgress.textContent = `Question ${currentQuestionIndex + 1} of ${currentQuestions.length}`;
-    document.getElementById("question-text").textContent = question.question_text;
+  const question = currentQuestions[currentQuestionIndex];
+  questionProgress.textContent = `Question ${currentQuestionIndex + 1} of ${currentQuestions.length}`;
+  document.getElementById("question-text").textContent = question.question_text;
 
-    // Clear solution text when loading a new question
-    solutionText.classList.add("hidden"); // Hide solution text
-    solutionText.textContent = ''; // Clear previous solution text
+  // Clear solution text when loading a new question
+  solutionText.classList.add("hidden"); // Hide solution text
+  solutionText.textContent = ''; // Clear previous solution text
 
-    // Enable/Disable Prev/Next buttons
-    prevBtn.disabled = currentQuestionIndex === 0;
-    nextBtn.disabled = currentQuestionIndex === currentQuestions.length - 1;
+  // Reset the "Show Solution" button text to "Show Solution"
+  showSolutionBtn.textContent = "Show Solution";
 
-    // Ensure only one event listener for showing the solution
-    showSolutionBtn.removeEventListener("click", toggleSolution); 
-    showSolutionBtn.addEventListener("click", toggleSolution);
+  // Enable/Disable Prev/Next buttons
+  prevBtn.disabled = currentQuestionIndex === 0;
+  nextBtn.disabled = currentQuestionIndex === currentQuestions.length - 1;
+
+  // Ensure only one event listener for showing the solution
+  showSolutionBtn.removeEventListener("click", toggleSolution); 
+  showSolutionBtn.addEventListener("click", toggleSolution);
 }
 
-// Show and hide solution
+// Show and hide solution and change the button text
 function toggleSolution() {
-    solutionText.classList.toggle("hidden");
-    const question = currentQuestions[currentQuestionIndex];
-    if (!solutionText.classList.contains("hidden")) {
-        solutionText.textContent = question.solution;
-    } else {
-        solutionText.textContent = '';  // Reset solution when hidden
-    }
+  solutionText.classList.toggle("hidden");
+
+  const question = currentQuestions[currentQuestionIndex];
+  if (!solutionText.classList.contains("hidden")) {
+      solutionText.textContent = question.solution;
+      showSolutionBtn.textContent = "Hide Solution";  // Change button text to Hide Solution
+  } else {
+      solutionText.textContent = '';  // Reset solution when hidden
+      showSolutionBtn.textContent = "Show Solution";  // Change button text back to Show Solution
+  }
 }
+
 
 // Navigation buttons
 prevBtn.addEventListener("click", () => {
