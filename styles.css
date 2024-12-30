@@ -1,0 +1,192 @@
+/* Add custom theme to body */
+body {
+  background: linear-gradient(to bottom, #121821, #2A2F39); /* Darker gradient */
+  font-family: 'Roboto', sans-serif;
+  color: #e2e8f0; /* Light gray text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+nav {
+  background: #1A202C; /* Darker theme navbar */
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Stronger shadow */
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Home Button (Left it unchanged) */
+button#home-btn {
+  background: transparent;
+  color: #e2e8f0;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button#home-btn:hover {
+  color: #a0aec0; /* Lighter gray on hover */
+}
+
+/* Selection Section (Branch and Semester) */
+#selection-section {
+  background-color: #2D3748; /* Darker card background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+  max-width: 500px;
+  margin: 3rem auto;
+}
+
+/* Dropdown & Select fields */
+select, button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #4A5568;
+  background-color: #3E4A61; /* Darker shade for select inputs */
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+select:focus, button:hover {
+  background-color: #2B3B53; /* Darker blue-gray on focus or hover */
+  border-color: #63B3ED; /* Light blue border on hover for select field */
+  outline: none;
+}
+
+/* Chapter List Styling */
+#chapters-section {
+  background-color: #2D3748;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #e2e8f0;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 2rem;
+}
+
+/* List items for chapters */
+#chapters-list li {
+  background-color: #3E4A61; /* Darker blue-gray */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#chapters-list li:hover {
+  background-color: #2B3B53; /* Slightly lighter shade on hover */
+}
+
+/* Remove hover turn white behavior */
+#chapters-list li:focus {
+  background-color: #3E4A61; /* Ensure it remains same on click/focus */
+}
+
+/* Question Section Styling */
+#questions-section {
+  background-color: #2D3748;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+}
+
+/* Question Card */
+.question-card {
+  background-color: #1A202C; /* Very dark background for cards */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.question-card:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Solution Section Styling */
+#solution {
+  background-color: #1C2633;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+/* Question Progress */
+#question-progress {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+/* Flexbox for Prev/Next buttons */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Prev and Next buttons (Smaller padding and improved color) */
+button {
+  padding: 0.75rem 1.25rem; /* Smaller padding */
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #2B3B53;
+  border: none;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+button:hover, button:focus {
+  background-color: #2C3961; /* Darker hover color */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Styling (optional) */
+footer {
+  background-color: #2A4365;
+  color: #e2e8f0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      padding: 1.5rem;
+      text-align: center;
+  }
+
+  #selection-section, #chapters-section, #questions-section {
+      width: 90%;
+      margin: 2rem auto;
+      padding: 1.5rem;
+  }
+
+  select, button {
+      font-size: 1rem;
+  }
+
+  .question-card {
+      padding: 1rem;
+  }
+
+  .flex {
+      flex-direction: column;
+      gap: 1rem;
+  }
+}
