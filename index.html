@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEU Chapterwise PYQs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="w-full p-4 bg-blue-600 text-white flex justify-between items-center">
+        <button id="home-btn" class="text-lg font-bold">Home</button>
+        <h1 class="text-lg font-semibold mx-auto">BEU Chapterwise PYQs</h1>
+    </nav>
+
+    <!-- Selection Section (Branch, Semester) -->
+    <div class="container mx-auto px-4 py-6" id="selection-section">
+        <div class="mb-6">
+            <label for="branch" class="block text-lg font-semibold">Select Branch</label>
+            <select id="branch" class="w-full px-4 py-2 border rounded-md focus:outline-none">
+                <option value="" disabled selected>-- Select Branch --</option>
+            </select>
+        </div>
+        <div class="mb-6">
+            <label for="semester" class="block text-lg font-semibold">Select Semester</label>
+            <select id="semester" class="w-full px-4 py-2 border rounded-md focus:outline-none" disabled>
+                <option value="" disabled selected>-- Select Semester --</option>
+            </select>
+        </div>
+        <button id="get-pyqs-btn" class="w-full bg-blue-500 hover:bg-blue-700 text-white py-2 rounded-md disabled:opacity-50" disabled>Get PYQs</button>
+    </div>
+
+    <!-- Chapter List Section -->
+    <div id="chapters-section" class="hidden mt-6">
+        <p class="text-lg font-semibold">Select Chapter</p>
+        <ul id="chapters-list" class="space-y-2">
+            <!-- Chapters will be dynamically added here -->
+        </ul>
+    </div>
+
+    <!-- Questions Section -->
+    <div id="questions-section" class="hidden mt-6 space-y-4">
+        <!-- Question Progress at Top -->
+        <p id="question-progress" class="text-center text-sm text-gray-500"></p>
+        <div class="bg-white shadow rounded-lg p-4">
+            <p id="question-text" class="text-lg font-medium"></p>
+            <button id="show-solution-btn" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Show Solution</button>
+            <p id="solution" class="hidden mt-4 bg-gray-100 p-4 rounded-md"></p>
+        </div>
+        <div class="flex justify-between">
+            <button id="prev-btn" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded-md" disabled>Prev</button>
+            <button id="next-btn" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded-md" disabled>Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
