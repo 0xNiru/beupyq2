@@ -8,9 +8,9 @@
               {
                 "question_id": 1,
                 "question_type": "objective",
-                "question_text": "What is a computer? What is a computer? ",
+                "question_text": "What is a computer? What is a computer?",
                 "options": [
-                  "An electronic device ",
+                  "An electronic device",
                   "A mechanical calculator",
                   "A typewriter",
                   "A television"
@@ -23,7 +23,7 @@
                 "question_type": "numerical",
                 "question_text": "If a CPU processes 100 instructions per second and there are 500 instructions in total, how many seconds will it take to complete?",
                 "correct_answer": "5",
-                "solution": "Time \\( = \\frac{\\text{Total instructions}}{\\text{Instructions per second}} = \\frac{500}{100} = 5 \\) seconds"
+                "solution": "Time = Total instructions / Instructions per second = 500 / 100 = 5 seconds"
               },
               {
                 "question_id": 3,
@@ -35,10 +35,7 @@
           }
         }
       }
-    }
-  }
-
-  "branches": {
+    },
     "ECE": {
       "semesters": {
         "Semester 1": {
@@ -47,7 +44,7 @@
               {
                 "question_id": 1,
                 "question_type": "objective",
-                "question_text": "Structural sections such as rails , angles , I-beams are made by",
+                "question_text": "Structural sections such as rails, angles, I-beams are made by",
                 "options": [
                   "Hot rolling",
                   "Hot drawing",
@@ -55,9 +52,8 @@
                   "Hot extrusion"
                 ],
                 "correct_answer": 0,
-                "solution": "Hot rolling is used to make structures like I-beams, rails, H-beams, T-beams, U-beams, angels, etc"
+                "solution": "Hot rolling is used to make structures like I-beams, rails, H-beams, T-beams, U-beams, angles, etc."
               },
-
               {
                 "question_id": 2,
                 "question_type": "objective",
@@ -69,12 +65,12 @@
                   "all of the above"
                 ],
                 "correct_answer": 2,
-                "solution": "In an arc welding, the arc is struck between a flux covered stick electrode and the work-piece. When the current flows, the gap between the electrode and workpiece mainly acts as impedance for the flow of the current. Hence we can say that arc is created between the electrode and work by contact resistance."
+                "solution": "In an arc welding process, the arc is struck between a flux-covered stick electrode and the workpiece. The gap acts as impedance for current flow, creating the arc by contact resistance."
               },
               {
                 "question_id": 3,
                 "question_type": "objective",
-                "question_text": "Which of the following welding processes uses non-consumable electrodes",
+                "question_text": "Which of the following welding processes uses non-consumable electrodes?",
                 "options": [
                   "TIG welding",
                   "MIG welding",
@@ -82,26 +78,13 @@
                   "Submerged arc welding"
                 ],
                 "correct_answer": 0,
-                "solution": "Gas Tungsten Arc Welding (GTAW), also known as tungsten inert gas (TIG) welding is a process that produces an electric arc maintained between a non-consumable tungsten electrode and the part to be welded."
-              },
-
-              {
-                "question_id": ,
-                "question_type": "numerical",
-                "question_text": "",
-                "correct_answer": "",
-                "solution": ""
+                "solution": "Gas Tungsten Arc Welding (GTAW), also known as tungsten inert gas (TIG) welding, uses a non-consumable tungsten electrode."
               },
               {
                 "question_id": 4,
                 "question_type": "subjective",
-                "question_text": "What are the welding defects occur during welding. Explain any four.",
-                "solution": "Welding defects are imperfections in welded joints that affect strength and appearance. Common defects include:
-
-Porosity: Gas pockets in the weld caused by contamination or improper shielding, weakening the weld.
-Cracks: Linear breaks due to stress, poor design, or welding errors, compromising structural integrity.
-Incomplete Fusion: Lack of proper fusion between weld and base metal, caused by insufficient heat or poor technique, reducing strength.
-Undercut: Grooves along the weld edge from excessive heat or improper angle, weakening the joint."
+                "question_text": "What are the welding defects occur during welding? Explain any four.",
+                "solution": "Welding defects are imperfections in welded joints that affect strength and appearance. Common defects include:\n\n1. Porosity: Gas pockets in the weld caused by contamination or improper shielding, weakening the weld.\n2. Cracks: Linear breaks due to stress, poor design, or welding errors, compromising structural integrity.\n3. Incomplete Fusion: Lack of proper fusion between weld and base metal, caused by insufficient heat or poor technique, reducing strength.\n4. Undercut: Grooves along the weld edge from excessive heat or improper angle, weakening the joint."
               }
             ]
           }
@@ -109,5 +92,4 @@ Undercut: Grooves along the weld edge from excessive heat or improper angle, wea
       }
     }
   }
-
 }
