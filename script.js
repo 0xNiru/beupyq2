@@ -22,19 +22,11 @@ const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const questionProgress = document.getElementById("question-progress");
 const homeBtn = document.getElementById("home-btn");
-const aboutBtn = document.getElementById("about-btn");
 
 homeBtn.addEventListener("click", () => {
     document.getElementById("selection-section").classList.remove("hidden");
     chaptersSection.classList.add("hidden");
     questionsSection.classList.add("hidden");
-});
-
-// Add event listener for about button
-aboutBtn.addEventListener("click", () => {
-    // Handle about section
-    console.log("About Us clicked");
-    // Add your about page functionality here
 });
 
 function populateBranchDropdown() {
@@ -146,16 +138,13 @@ function createObjectiveQuestion(question, container) {
     
     question.options.forEach((option, index) => {
         const optionDiv = document.createElement("div");
-        // Changed to flex with items-center and a bit of right margin
-        optionDiv.className = "flex items-center mb-2"; 
-       // optionDiv.className = "flex items-center space-x-2";
+        optionDiv.className = "flex items-center space-x-2";
         
         const radio = document.createElement("input");
         radio.type = "radio";
         radio.name = "question-option";
         radio.value = index;
-        radio.className = "form-radio text-blue-600 mr-3"; // Added margin-right mr-3
-        
+        radio.className = "form-radio text-blue-600";
         
         const label = document.createElement("label");
         label.textContent = option;
