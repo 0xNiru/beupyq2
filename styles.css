@@ -1,11 +1,5 @@
 
-body {
-  background: linear-gradient(to bottom, #0d1238, #0d1238); /* Solid dark background */
-  font-family: 'Roboto', sans-serif;
-  color: #e2e8f0; /* Light gray text */
-  margin: 0;
-  padding: 0;
-}
+
 
 /* Navbar styling */
 nav {
