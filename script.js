@@ -138,13 +138,16 @@ function createObjectiveQuestion(question, container) {
     
     question.options.forEach((option, index) => {
         const optionDiv = document.createElement("div");
-        optionDiv.className = "flex items-center space-x-2";
+        // Changed to flex with items-center and a bit of right margin
+        optionDiv.className = "flex items-center mb-2"; 
+       // optionDiv.className = "flex items-center space-x-2";
         
         const radio = document.createElement("input");
         radio.type = "radio";
         radio.name = "question-option";
         radio.value = index;
-        radio.className = "form-radio text-blue-600";
+        radio.className = "form-radio text-blue-600 mr-3"; // Added margin-right mr-3
+        
         
         const label = document.createElement("label");
         label.textContent = option;
