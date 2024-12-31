@@ -29,6 +29,18 @@
                 "question_id": 5,
                 "question_text": "What is the difference between hardware and software?",
                 "solution": "Hardware refers to physical components of a computer, whereas software is a set of instructions or programs that tell the hardware what to do."
+              },
+              { "question_id": 6,
+                "question _type": "objective",
+                "question_text": "Orange is a ________",
+                "solution": "jhaant nhi pata",
+                "options_data": { "options": 
+                  {
+                  "option_1": "Fruit",
+                  "option_2": "Colour",
+                  "option_3": "iskimkc"
+                },
+                  "right_option": "option_3"
               }
             ]
           }
