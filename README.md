@@ -1,1 +1,1 @@
-https://beupyq2.vercel.app/
+https://beupyq.vercel.app/
