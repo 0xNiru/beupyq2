@@ -1,3 +1,7 @@
+function typesetMathJax() {
+MathJax.Hub.Typeset(document.getElementById("questions-section"));
+}
+
 let quizData;
 let currentChapterIndex = 0;
 let currentQuestionIndex = 0;
@@ -84,6 +88,7 @@ function loadQuestions(branch, semester, chapter) {
     currentQuestionIndex = 0;
 
     displayQuestion();
+    typesetMathJax();
     questionsSection.classList.remove("hidden");
 }
 
@@ -98,6 +103,7 @@ function displayQuestion() {
 
     // Clear previous content
     questionContainer.textContent = question.question_text;
+    typesetMathJax();
     const oldAnswerContainer = document.getElementById("answer-container");
     if (oldAnswerContainer) oldAnswerContainer.remove();
     
@@ -217,6 +223,7 @@ function checkAnswer() {
             ${question.solution}
         </div>
     `;
+    typesetMathJax();
 }
 
 function toggleSolution() {
@@ -232,6 +239,7 @@ function toggleSolution() {
             showSolutionBtn.textContent = "Show Solution";
         }
     }
+    typesetMathJax();
 }
 
 prevBtn.addEventListener("click", () => {
@@ -239,6 +247,7 @@ prevBtn.addEventListener("click", () => {
         currentQuestionIndex--;
         displayQuestion();
     }
+    typesetMathJax();
 });
 
 nextBtn.addEventListener("click", () => {
@@ -246,6 +255,7 @@ nextBtn.addEventListener("click", () => {
         currentQuestionIndex++;
         displayQuestion();
     }
+    typesetMathJax();
 });
 
 function capitalize(str) {
