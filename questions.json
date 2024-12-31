@@ -23,7 +23,7 @@
                 "question_type": "numerical",
                 "question_text": "If a CPU processes 100 instructions per second and there are 500 instructions in total, how many seconds will it take to complete?",
                 "correct_answer": "5",
-                "solution": "Time = Total instructions / Instructions per second = 500/100 = 5 seconds"
+                "solution": "Time \\( = \\frac{\\text{Total instructions}}{\\text{Instructions per second}} = \\frac{500}{100} = 5 \\) seconds"
               },
               {
                 "question_id": 3,
