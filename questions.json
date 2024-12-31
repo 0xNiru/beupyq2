@@ -8,11 +8,11 @@
               {
                 "question_id": 1,
                 "question_type": "objective",
-                "question_text": "What is a computer? What is a computer? $$ \\int{{\\frac{1}{{9{x^2} + 6x + 5}}dx}} = \\int{\\frac{1}{9\\left(x^2+\\frac{2}{3}x+\\frac{5}{9}\\right)}dx}$$",
+                "question_text": "What is a computer? What is a computer? ",
                 "options": [
                   "An electronic device ",
                   "A mechanical calculator",
-                  "A typewriter $E = mc^2$ ",
+                  "A typewriter",
                   "A television"
                 ],
                 "correct_answer": 0,
@@ -37,4 +37,77 @@
       }
     }
   }
+
+  "branches": {
+    "ECE": {
+      "semesters": {
+        "Semester 1": {
+          "chapters": {
+            "Welding": [
+              {
+                "question_id": 1,
+                "question_type": "objective",
+                "question_text": "Structural sections such as rails , angles , I-beams are made by",
+                "options": [
+                  "Hot rolling",
+                  "Hot drawing",
+                  "Hot piercing",
+                  "Hot extrusion"
+                ],
+                "correct_answer": 0,
+                "solution": "Hot rolling is used to make structures like I-beams, rails, H-beams, T-beams, U-beams, angels, etc"
+              },
+
+              {
+                "question_id": 2,
+                "question_type": "objective",
+                "question_text": "In arc welding, the electric arc is produced between the work and the electrode by",
+                "options": [
+                  "voltage",
+                  "flow of current",
+                  "contact resistance",
+                  "all of the above"
+                ],
+                "correct_answer": 2,
+                "solution": "In an arc welding, the arc is struck between a flux covered stick electrode and the work-piece. When the current flows, the gap between the electrode and workpiece mainly acts as impedance for the flow of the current. Hence we can say that arc is created between the electrode and work by contact resistance."
+              },
+              {
+                "question_id": 3,
+                "question_type": "objective",
+                "question_text": "Which of the following welding processes uses non-consumable electrodes",
+                "options": [
+                  "TIG welding",
+                  "MIG welding",
+                  "Manual arc welding",
+                  "Submerged arc welding"
+                ],
+                "correct_answer": 0,
+                "solution": "Gas Tungsten Arc Welding (GTAW), also known as tungsten inert gas (TIG) welding is a process that produces an electric arc maintained between a non-consumable tungsten electrode and the part to be welded."
+              },
+
+              {
+                "question_id": ,
+                "question_type": "numerical",
+                "question_text": "",
+                "correct_answer": "",
+                "solution": ""
+              },
+              {
+                "question_id": 4,
+                "question_type": "subjective",
+                "question_text": "What are the welding defects occur during welding. Explain any four.",
+                "solution": "Welding defects are imperfections in welded joints that affect strength and appearance. Common defects include:
+
+Porosity: Gas pockets in the weld caused by contamination or improper shielding, weakening the weld.
+Cracks: Linear breaks due to stress, poor design, or welding errors, compromising structural integrity.
+Incomplete Fusion: Lack of proper fusion between weld and base metal, caused by insufficient heat or poor technique, reducing strength.
+Undercut: Grooves along the weld edge from excessive heat or improper angle, weakening the joint."
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+
 }
