@@ -26,6 +26,20 @@ const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const questionProgress = document.getElementById("question-progress");
 const homeBtn = document.getElementById("home-btn");
+const backToChapters = document.getElementById("back-to-chapters");
+const backToHome = document.getElementById("back-to-home");
+
+
+// Add event listeners for back buttons
+backToChapters.addEventListener("click", () => {
+    questionsSection.classList.add("hidden");
+    chaptersSection.classList.remove("hidden");
+});
+
+backToHome.addEventListener("click", () => {
+    chaptersSection.classList.add("hidden");
+    document.getElementById("selection-section").classList.remove("hidden");
+});
 
 homeBtn.addEventListener("click", () => {
     document.getElementById("selection-section").classList.remove("hidden");
@@ -139,29 +153,51 @@ function displayQuestion() {
 
 function createObjectiveQuestion(question, container) {
     const optionsContainer = document.createElement("div");
-    optionsContainer.className = "space-y-2 mt-4";
+    // Increased width and changed layout
+    optionsContainer.className = "grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 w-full";
     
     question.options.forEach((option, index) => {
         const optionDiv = document.createElement("div");
-        optionDiv.className = "flex items-center space-x-2";
+        // Made each option a clickable button-like element
+        optionDiv.className = "p-4 rounded-lg border border-gray-600 hover:bg-gray-700 cursor-pointer flex items-center";
         
         const radio = document.createElement("input");
         radio.type = "radio";
         radio.name = "question-option";
         radio.value = index;
-        radio.className = "form-radio text-blue-600";
+        radio.className = "hidden"; // Hide the default radio button
+        
+        const customRadio = document.createElement("div");
+        customRadio.className = "w-4 h-4 rounded-full border-2 border-blue-500 mr-3 flex items-center justify-center";
+        
+        const innerDot = document.createElement("div");
+        innerDot.className = "w-2 h-2 rounded-full bg-blue-500 hidden";
         
         const label = document.createElement("label");
         label.textContent = option;
-        label.className = "text-gray-300";
+        label.className = "text-gray-300 flex-grow";
         
+        customRadio.appendChild(innerDot);
         optionDiv.appendChild(radio);
+        optionDiv.appendChild(customRadio);
         optionDiv.appendChild(label);
+        
+        // Handle option selection
+        optionDiv.addEventListener('click', () => {
+            document.querySelectorAll('input[name="question-option"]').forEach(r => {
+                r.checked = false;
+                r.parentElement.classList.remove('bg-gray-700');
+                r.parentElement.querySelector('.w-2.h-2').classList.add('hidden');
+            });
+            radio.checked = true;
+            optionDiv.classList.add('bg-gray-700');
+            innerDot.classList.remove('hidden');
+        });
+        
         optionsContainer.appendChild(optionDiv);
     });
     
     const submitBtn = createSubmitButton();
-    
     container.appendChild(optionsContainer);
     container.appendChild(submitBtn);
 }
