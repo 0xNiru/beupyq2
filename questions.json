@@ -7,138 +7,29 @@
             "Networking": [
               {
                 "question_id": 1,
+                "question_type": "objective",
                 "question_text": "What is a computer?",
+                "options": [
+                  "An electronic device ",
+                  "A mechanical calculator",
+                  "A typewriter",
+                  "A television"
+                ],
+                "correct_answer": 0,
                 "solution": "A computer is an electronic device that can store, retrieve, and process data."
               },
               {
                 "question_id": 2,
-                "question_text": "What is the function of the CPU?",
-                "solution": "The CPU (Central Processing Unit) processes instructions and performs calculations."
+                "question_type": "numerical",
+                "question_text": "If a CPU processes 100 instructions per second and there are 500 instructions in total, how many seconds will it take to complete?",
+                "correct_answer": "5",
+                "solution": "Time = Total instructions / Instructions per second = 500/100 = 5 seconds"
               },
               {
                 "question_id": 3,
-                "question_text": "Define an Operating System.",
-                "solution": "An Operating System manages hardware and software resources on a computer."
-              },
-              {
-                "question_id": 4,
-                "question_text": "What is RAM?",
-                "solution": "RAM (Random Access Memory) is a form of computer memory used for storing data temporarily."
-              },
-              {
-                "question_id": 5,
-                "question_text": "What is the difference between hardware and software?",
-                "solution": "Hardware refers to physical components of a computer, whereas software is a set of instructions or programs that tell the hardware what to do."
-              },
-              { "question_id": 6,
-                "question _type": "objective",
-                "question_text": "Orange is a ________",
-                "solution": "jhaant nhi pata",
-                "options_data": { "options": 
-                  {
-                  "option_1": "Fruit",
-                  "option_2": "Colour",
-                  "option_3": "iskimkc"
-                },
-                  "right_option": "option_3"
-              }
-              }
-            ]
-          }
-        },
-        "Semester 2": {
-          "chapters": {
-            "Chapter 2": [
-              {
-                "question_id": 1,
-                "question_text": "What is data processing?",
-                "solution": "Data processing refers to the process of converting raw data into meaningful information."
-              },
-              {
-                "question_id": 2,
-                "question_text": "Explain the role of input devices.",
-                "solution": "Input devices allow users to input data and commands into a computer."
-              },
-              {
-                "question_id": 3,
-                "question_text": "What is a computer network?",
-                "solution": "A computer network is a system of computers connected to share resources and information."
-              },
-              {
-                "question_id": 4,
-                "question_text": "What are the different types of software?",
-                "solution": "Software types include system software, application software, and utility software."
-              },
-              {
-                "question_id": 5,
-                "question_text": "Define an algorithm.",
-                "solution": "An algorithm is a step-by-step procedure for solving a problem."
-              }
-            ]
-          }
-        }
-      }
-    },
-    "ECE": {
-      "semesters": {
-        "Semester 1": {
-          "chapters": {
-            "Chapter 1": [
-              {
-                "question_id": 1,
-                "question_text": "What is electronics?",
-                "solution": "Electronics involves the study and application of devices and circuits that use electrical energy."
-              },
-              {
-                "question_id": 2,
-                "question_text": "What is the Ohm’s Law?",
-                "solution": "Ohm’s Law states that the current through a conductor is proportional to the voltage across it."
-              },
-              {
-                "question_id": 3,
-                "question_text": "What is resistance?",
-                "solution": "Resistance is the opposition that a substance offers to the flow of electric current."
-              },
-              {
-                "question_id": 4,
-                "question_text": "Explain what a transistor does.",
-                "solution": "A transistor is a semiconductor device used to amplify or switch electronic signals."
-              },
-              {
-                "question_id": 5,
-                "question_text": "What is an electrical circuit?",
-                "solution": "An electrical circuit is a path through which electric current flows."
-              }
-            ]
-          }
-        },
-        "Semester 2": {
-          "chapters": {
-            "Chapter 2": [
-              {
-                "question_id": 1,
-                "question_text": "What is a capacitor?",
-                "solution": "A capacitor is an electronic component that stores electrical energy in an electric field."
-              },
-              {
-                "question_id": 2,
-                "question_text": "Describe the purpose of a diode.",
-                "solution": "A diode allows current to flow in only one direction, functioning as a one-way valve."
-              },
-              {
-                "question_id": 3,
-                "question_text": "What is Kirchhoff’s voltage law?",
-                "solution": "Kirchhoff’s Voltage Law states that the sum of the electromotive forces in any closed loop is equal to the sum of the potential drops in that loop."
-              },
-              {
-                "question_id": 4,
-                "question_text": "What is the purpose of a fuse?",
-                "solution": "A fuse protects an electrical circuit by breaking the connection if the current flow is too high."
-              },
-              {
-                "question_id": 5,
-                "question_text": "What is alternating current (AC)?",
-                "solution": "Alternating current (AC) is an electric current that reverses its direction periodically."
+                "question_type": "subjective",
+                "question_text": "Define an Operating System and explain its main functions.",
+                "solution": "An Operating System is system software that manages hardware and software resources. Its main functions include:\n1. Process Management\n2. Memory Management\n3. File System Management\n4. Device Management\n5. Security Management"
               }
             ]
           }
