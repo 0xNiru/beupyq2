@@ -1,6 +1,6 @@
-/* Add custom theme to body */
+
 body {
-  background: linear-gradient(to bottom, #121821, #2A2F39); /* Darker gradient */
+  background-color: #121821; /* Solid dark background */
   font-family: 'Roboto', sans-serif;
   color: #e2e8f0; /* Light gray text */
   margin: 0;
