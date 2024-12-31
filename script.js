@@ -103,7 +103,6 @@ function displayQuestion() {
 
     // Clear previous content
     questionContainer.textContent = question.question_text;
-    typesetMathJax();
     const oldAnswerContainer = document.getElementById("answer-container");
     if (oldAnswerContainer) oldAnswerContainer.remove();
     
