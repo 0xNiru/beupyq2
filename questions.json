@@ -8,11 +8,11 @@
               {
                 "question_id": 1,
                 "question_type": "objective",
-                "question_text": "What is a computer?",
+                "question_text": "What is a computer? $$\\int_{a}^{b} x^2 \\, dx = \\frac{b^3}{3} - \\frac{a^3}{3}$$",
                 "options": [
                   "An electronic device ",
                   "A mechanical calculator",
-                  "A typewriter",
+                  "A typewriter $E = mc^2$ ",
                   "A television"
                 ],
                 "correct_answer": 0,
