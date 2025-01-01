@@ -40,7 +40,7 @@
       "semesters": {
         "Semester 1": {
           "chapters": {
-            "Welding": [
+            "Workshop-Welding": [
               {
                 "question_id": 1,
                 "question_type": "objective",
@@ -87,7 +87,7 @@
                 "solution": "Welding defects are imperfections in welded joints that affect strength and appearance. Common defects include:\n\n1. Porosity: Gas pockets in the weld caused by contamination or improper shielding, weakening the weld.\n2. Cracks: Linear breaks due to stress, poor design, or welding errors, compromising structural integrity.\n3. Incomplete Fusion: Lack of proper fusion between weld and base metal, caused by insufficient heat or poor technique, reducing strength.\n4. Undercut: Grooves along the weld edge from excessive heat or improper angle, weakening the joint."
               }
             ],
-            "foundry" : [
+            "Workshop-foundry" : [
               {
                 "question_id": 1,
                 "question_type": "objective",
@@ -100,7 +100,38 @@
                 ],
                 "correct_answer": 0,
                 "solution": "In centrifugal casting, cores are made of sand. Cores are used to create internal cavities or features in castings that are not possible to form using a pattern alone"
-              }
+              },
+              {
+                "question_id": 2,
+                "question_type": "objective",
+                "question_text": "Loam sand is a mixture of",
+                "options": [
+                  "20% sand and 80% clay",
+                  "50% sand and 50% clay",
+                  "70% sand and 30% clay",
+                  "80% sand and 20% clay"
+                ],
+                "correct_answer": 1,
+                "solution": "Loam sand is a mixture of 50% sand and 50% clay"
+              },
+              {
+                "question_id": 3,
+                "question_type": "subjective",
+                "question_text": "List any four materials used for pattern making",
+                "solution": "The four materials that are used for pattern making are Wood , Metal, Plastic and Wax"
+              },
+              {
+                "question_id": 4,
+                "question_type": "subjective",
+                "question_text": "Explain any four properties of moulding sand",
+                "solution": "1. Permeability: The ability of the sand to allow gases and steam to escape during the casting process, preventing defects in the casting. \n\n2. Cohesiveness (Strength): The sand's capacity to hold its shape under pressure and retain the mold's dimensions during casting. \n\n3. Refractoriness: The ability of sand to withstand high temperatures without melting or breaking down, ensuring it can handle molten metal. \n\n4. Plasticity: The flexibility of sand to deform and retain its shape without cracking, ensuring intricate details in the mold."
+              },
+              {
+                "question_id": 5,
+                "question_type": "subjective",
+                "question_text": "What is meant by sand binders ? Name the types of sand binders.",
+                "solution": "Sand binders are substances added to molding sand to provide strength and cohesiveness.\n1. Organic (e.g., dextrin, molasses)\n2. Inorganic (e.g., clay, sodium silicate)\n3. Chemical (e.g., resin, phenolic urethane)\n4. Natural (e.g., bentonite clay)"
+              }              
             ]
           }
         }
