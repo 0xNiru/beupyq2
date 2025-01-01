@@ -40,7 +40,7 @@
       "semesters": {
         "Semester 1": {
           "chapters": {
-            "Workshop-Welding": [
+            "Workshop - Welding": [
               {
                 "question_id": 1,
                 "question_type": "objective",
@@ -87,7 +87,7 @@
                 "solution": "Welding defects are imperfections in welded joints that affect strength and appearance. Common defects include:\n\n1. Porosity: Gas pockets in the weld caused by contamination or improper shielding, weakening the weld.\n2. Cracks: Linear breaks due to stress, poor design, or welding errors, compromising structural integrity.\n3. Incomplete Fusion: Lack of proper fusion between weld and base metal, caused by insufficient heat or poor technique, reducing strength.\n4. Undercut: Grooves along the weld edge from excessive heat or improper angle, weakening the joint."
               }
             ],
-            "Workshop-foundry" : [
+            "Workshop - Foundry" : [
               {
                 "question_id": 1,
                 "question_type": "objective",
