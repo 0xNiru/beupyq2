@@ -111,14 +111,14 @@
                   "70% sand and 30% clay",
                   "80% sand and 20% clay"
                 ],
-                "correct_answer": 1,
-                "solution": "Loam sand is a mixture of 50% sand and 50% clay"
+                "correct_answer": 3,
+                "solution": "Loam sand is a mixture of 80% sand and 20% clay"
               },
               {
                 "question_id": 3,
                 "question_type": "subjective",
                 "question_text": "List any four materials used for pattern making",
-                "solution": "The four materials that are used for pattern making are Wood , Metal, Plastic and Wax"
+                "solution": "The four materials that are used for pattern making are V block pattern, runner, riser, level, Peg rammer"
               },
               {
                 "question_id": 4,
