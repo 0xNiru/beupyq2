@@ -86,6 +86,21 @@
                 "question_text": "What are the welding defects occur during welding? Explain any four.",
                 "solution": "Welding defects are imperfections in welded joints that affect strength and appearance. Common defects include:\n\n1. Porosity: Gas pockets in the weld caused by contamination or improper shielding, weakening the weld.\n2. Cracks: Linear breaks due to stress, poor design, or welding errors, compromising structural integrity.\n3. Incomplete Fusion: Lack of proper fusion between weld and base metal, caused by insufficient heat or poor technique, reducing strength.\n4. Undercut: Grooves along the weld edge from excessive heat or improper angle, weakening the joint."
               }
+            ],
+            "foundry" : [
+              {
+                "question_id": 1,
+                "question_type": "objective",
+                "question_text": "In centrifugal casting",
+                "options": [
+                  "Core is made of sand",
+                  "Core is made of ferrous material",
+                  "Core is made of non-ferrous material",
+                  "No Core is used"
+                ],
+                "correct_answer": 0,
+                "solution": "In centrifugal casting, cores are made of sand. Cores are used to create internal cavities or features in castings that are not possible to form using a pattern alone"
+              }
             ]
           }
         }
