@@ -22,17 +22,24 @@ h1 {
 }
 
 /* Home Button (Left it unchanged) */
-button#home-btn {
+#home-btn {
   background: transparent;
   color: #e2e8f0;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
+  max-width: 10px;
 }
 
-button#home-btn:hover {
+#home-btn:hover {
   color: #a0aec0; /* Lighter gray on hover */
 }
+
+#back-to-home{
+  max-width: 20px;
+}
+
+#back-to-chapters {
+  max-width: 20px;
+}
+
 
 /* Selection Section (Branch and Semester) */
 #selection-section {
@@ -44,25 +51,25 @@ button#home-btn:hover {
   margin: 3rem auto;
 }
 
-/* Dropdown & Select fields */
+/* Dropdown & Select fields 
 select, button {
-  width: 100%;
+  width: 30%;
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid #4A5568;
-  background-color: #3E4A61; /* Darker shade for select inputs */
+  background-color: #3E4A61; 
   color: #e2e8f0;
   font-size: 1rem;
   margin-bottom: 1.5rem;
   box-sizing: border-box;
   transition: all 0.3s ease;
-}
+} 
 
 select:focus, button:hover {
-  background-color: #2B3B53; /* Darker blue-gray on focus or hover */
-  border-color: #63B3ED; /* Light blue border on hover for select field */
+  background-color: #2B3B53; 
+  border-color: #63B3ED; 
   outline: none;
-}
+} */
 
 /* Chapter List Styling */
 #chapters-section {
@@ -138,9 +145,9 @@ select:focus, button:hover {
   justify-content: space-between;
 }
 
-/* Prev and Next buttons (Smaller padding and improved color) */
+/* Prev and Next buttons (Smaller padding and improved color)
 button {
-  padding: 0.75rem 1.25rem; /* Smaller padding */
+  padding: 0.75rem 1.25rem; 
   font-size: 1rem;
   border-radius: 8px;
   background-color: #2B3B53;
@@ -150,10 +157,10 @@ button {
 }
 
 button:hover, button:focus {
-  background-color: #2C3961; /* Darker hover color */
+  background-color: #2C3961; 
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
+}  */
 
 /* Footer Styling (optional) */
 footer {
@@ -163,7 +170,7 @@ footer {
   text-align: center;
 }
 
-/* Mobile Responsive Design */
+/* Mobile Responsive Design 
 @media screen and (max-width: 768px) {
   nav {
       flex-direction: column;
@@ -190,3 +197,4 @@ footer {
       gap: 1rem;
   }
 }
+*/
