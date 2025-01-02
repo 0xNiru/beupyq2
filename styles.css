@@ -43,7 +43,7 @@ h1 {
 
 /* Selection Section (Branch and Semester) */
 #selection-section {
-  background-color: #2D3748; /* Darker card background */
+  background-color: #020520; /* Darker card background */
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4); /* More prominent shadow */
@@ -73,7 +73,7 @@ select:focus, button:hover {
 
 /* Chapter List Styling */
 #chapters-section {
-  background-color: #2D3748;
+  background-color: #020520;
   padding: 2rem;
   border-radius: 12px;
   color: #e2e8f0;
@@ -103,7 +103,7 @@ select:focus, button:hover {
 
 /* Question Section Styling */
 #questions-section {
-  background-color: #2D3748;
+  background-color: #020520;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
@@ -112,7 +112,7 @@ select:focus, button:hover {
 
 /* Question Card */
 .question-card {
-  background-color: #1A202C; /* Very dark background for cards */
+  background-color: #020520; /* Very dark background for cards */
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
