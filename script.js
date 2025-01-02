@@ -49,7 +49,7 @@ homeBtn.addEventListener("click", () => {
 
 function populateBranchDropdown() {
     const branches = Object.keys(quizData.branches);
-    branchDropdown.innerHTML = `<option value="" disabled selected>-- Select Branch --</option>` +
+    branchDropdown.innerHTML = `<option value="" disabled selected> - - Select Branch - - </option>` +
         branches.map(branch => `<option value="${branch}">${capitalize(branch)}</option>`).join("");
 
     branchDropdown.addEventListener("change", populateSemesterDropdown);
@@ -58,7 +58,7 @@ function populateBranchDropdown() {
 function populateSemesterDropdown() {
     const branch = branchDropdown.value;
     semesterDropdown.disabled = false;
-    semesterDropdown.innerHTML = `<option value="" disabled selected>-- Select Semester --</option>`;
+    semesterDropdown.innerHTML = `<option value="" disabled selected> - - Select Semester - - </option>`;
     const semesters = Object.keys(quizData.branches[branch].semesters);
 
     semesterDropdown.innerHTML += semesters.map(sem => `<option value="${sem}">${capitalize(sem)}</option>`).join("");
