@@ -2,29 +2,4 @@ body {
   background-color: #020520;
 }
 
-   .telegram-btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 16px; /* Smaller padding */
-      background-color: #0088cc;
-      color: white;
-      font-size: 14px; /* Smaller font size */
-      text-align: center;
-      border-radius: 30px; /* More rounded corners */
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    
-    .telegram-btn img {
-      width: 18px; /* Smaller logo */
-      margin-right: 6px; /* Smaller space between logo and text */
-    }
-
-    .telegram-btn:hover {
-      background-color: #007bb5;
-    }
-
-    .telegram-btn:active {
-      background-color: #005f8b;
-    }
+   
