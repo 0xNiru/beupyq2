@@ -21,6 +21,15 @@ h1 {
   text-align: center;
 }
 
+select {
+  text-align: center; 
+  text-align-last: center; 
+  width: 200px; 
+}
+option {
+  text-align: center; 
+}
+
 /* Home Button (Left it unchanged) */
 #home-btn {
   background: transparent;
