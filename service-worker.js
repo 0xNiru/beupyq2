@@ -8,7 +8,7 @@ const urlsToCache = [
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
   '/About/index.html',  
-  '/About/styles.css',  
+  '/About/about.css',  
   'https://cdn.tailwindcss.com',
   'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
   'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap',
