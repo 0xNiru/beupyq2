@@ -16,6 +16,7 @@
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="text-gray-200">
@@ -46,17 +47,17 @@
   <!-- Selection Section -->
   <div class="container mx-auto px-4 py-6 mt-10" id="selection-section">
       <div class="mb-6">
-        <h1 class="text-lg text-yellow-500 font-extrabold mx-auto">BEU Chapterwise PYQs</h1>
+        <h1 class="text-lg text-yellow-500 mx-auto" style="font-family: 'Poppins', sans-serif; font-weight: 800;">BEU chapterwise PYQs</h1>
           
           <label for="branch" class="block text-lg font-semibold text-gray-300 mt-6">Branch :</label>
           <select id="branch" class="w-full px-4 py-2 border rounded-md focus:outline-none bg-gray-700 text-white border-gray-600 mt-2">
-              <option value="" disabled selected> - - Select Branch - - </option>
+              <option value="" disabled selected> --select branch-- </option>
           </select>
       </div>
       <div class="mb-6">
-          <label for="semester" class="block text-lg font-semibold text-gray-300">Semester :</label>
+          <label for="semester" class="block text-lg text-gray-300">Semester :</label>
           <select id="semester" class="w-full px-4 py-2 border rounded-md focus:outline-none bg-gray-700 text-white border-gray-600 mt-2" disabled>
-              <option value="" disabled selected> - - Select Semester - - </option>
+              <option value="" disabled selected> --select semester-- </option>
           </select>
       </div>
       <button id="get-pyqs-btn" class="w-full bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-md disabled:opacity-50 mt-4" disabled>Get PYQs</button>
