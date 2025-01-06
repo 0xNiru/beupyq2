@@ -1,5 +1,26 @@
 {
   "branches": {
+    "CIVIL": {
+      "semesters": {
+        "Semester 1": {
+          "chapters": {
+            "Linear Algebra": [
+              {
+                "question_id": 1,
+                "question_type": "objective",
+                "question_text" : "If the nullity of the matrix $$\\begin{bmatrix} k & 1 & 2 \\\\ 1 & -1 & -2 \\\\ 1 & 1 & 4 \\end{bmatrix}$$ is 1, then the value of k is",
+                "options": [
+                  "-1",
+                  "0", 
+                  "1",
+                  "2"  
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
     "CSE": {
       "semesters": {
         "Semester 1": {
