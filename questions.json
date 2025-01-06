@@ -8,18 +8,28 @@
               {
                 "question_id": 1,
                 "question_type": "objective",
-                "question_text": "If the nullity of the matrix $$\\begin{bmatrix} k & 1 & 2 \\\\ 1 & -1 & -2 \\\\ 1 & 1 & 4 \\end{bmatrix}$$ is 1, then the value of k is  \\longrightarrow[ 2 Marks , 2018 ]",
+                "question_text": "If the nullity of the matrix $$\\begin{bmatrix} k & 1 & 2 \\\\ 1 & -1 & -2 \\\\ 1 & 1 & 4 \\end{bmatrix}$$ is 1, then the value of k is  $$\\longrightarrow$$[ 2 Marks , 2018 ]",
                 "options": [
                   "-1",
                   "0", 
                   "1",
                   "2"  
-                ]
+                ],
+                "correct_answer": ,
+                "solution": ""
               },
               {
                 "question_id": 2,
                 "question_type":"objective",
-                "question_text": "Let \nA= $$\\begin"
+                "question_text": "Let A = $$\\begin{bmatrix} 3 & 0 & 0 \\\\ 0 & 6 & 2 \\\\ 0 & 2 & 6 and  \\lambda_1 \\geq \\lambda_2 \\geq \\lambda_3 be the eigen values of A. Then the triple ( \\lambda_1, \\lambda_2, \\lambda_3) equals$$",
+                "options":[
+                  "( 9, 4, 2)",
+                  "(8, 4, 3)",
+                  "(9, 3, 3)",
+                  "(7, 5, 3)"
+                ],
+                "correct_answer": ,
+                "solution": " "
               }
             ]
           }
