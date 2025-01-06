@@ -48,7 +48,7 @@
                 "question_id": 4,
                 "question_type":"subjective",
                 "question_text": "Define Vector Space.",
-                "solution": "$\\begin{flalign*} & a^2 + b^2 = c^2 \hspace{3em} & \\end{flalign*}$"
+                "solution": "$$\\begin{flalign*} & a^2 + b^2 = c^2 \\hspace{3em} & \\end{flalign*}$$"
               },
               {
                 "question_id": 5,
