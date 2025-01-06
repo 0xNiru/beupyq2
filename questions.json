@@ -15,7 +15,7 @@
                   "1",
                   "2"  
                 ],
-                "correct_answer": ,
+                "correct_answer":0 ,
                 "solution": ""
               },
               {
@@ -28,7 +28,7 @@
                   "(9, 3, 3)",
                   "(7, 5, 3)"
                 ],
-                "correct_answer": ,
+                "correct_answer":0 ,
                 "solution": " "
               }
             ]
