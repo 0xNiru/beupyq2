@@ -8,7 +8,7 @@
               {
                   "question_id": 1,
                   "question_type": "objective",
-                  "question_text": "If the nullity of the matrix $$\\begin{bmatrix} k & 1 & 2 \\\\ 1 & -1 & -2 \\\\ 1 & 1 & 4 \\end{bmatrix}$$ is 1, then the value of k is $\\hspace{1cm}[2 Marks, 2018]",
+                  "question_text": "If the nullity of the matrix $$\\begin{bmatrix} k & 1 & 2 \\\\ 1 & -1 & -2 \\\\ 1 & 1 & 4 \\end{bmatrix}$$ is 1, then the value of k is $\\hspace{1cm}$[2 Marks, 2018]",
                   "options": [
                     "-1",
                     "0",
