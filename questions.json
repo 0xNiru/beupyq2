@@ -39,7 +39,7 @@
                   "$$\\begin{bmatrix} 1 & 0 & 0 \\\\ 50 & 0 & 0 \\\\ 50 & 0 & 1 \\end{bmatrix}$$",
                   "$$\\begin{bmatrix} 1 & 0 & 0 \\\\ 48 & 0 & 0 \\\\ 48 & 0 & 1 \\end{bmatrix}$$",
                   "$$\\begin{bmatrix} 1 & 0 & 0 \\\\ 25 & 1 & 0 \\\\ 25 & 0 & 1 \\end{bmatrix}$$",
-                  "$\\begin{bmatrix} 1 & 0 & 0 \\\\ 24 & 1 & 0 \\\\ 24 & 0 & 1 \\end{bmatrix}$"
+                  "$$\\begin{bmatrix} 1 & 0 & 0 \\\\ 24 & 1 & 0 \\\\ 24 & 0 & 1 \\end{bmatrix}$$"
                 ],
                 "solution": 0,
                 "correct_answer": ""
