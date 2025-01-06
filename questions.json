@@ -8,7 +8,7 @@
               {
                   "question_id": 1,
                   "question_type": "objective",
-                  "question_text": "If the nullity of the matrix $\\begin{bmatrix} k & 1 & 2 \\\\ 1 & -1 & -2 \\\\ 1 & 1 & 4 \\end{bmatrix}$ is 1, then the value of k is $$ \\quad[ 2 Marks, 2018 ]$$",
+                  "question_text": "If the nullity of the matrix $\\begin{bmatrix} k & 1 & 2 \\\\ 1 & -1 & -2 \\\\ 1 & 1 & 4 \\end{bmatrix}$ is 1, then the value of k is $$[ 2 Marks, 2018 ]$$",
                   "options": [
                     "-1",
                     "0",
@@ -48,7 +48,7 @@
                 "question_id": 4,
                 "question_type":"subjective",
                 "question_text": "Define Vector Space.",
-                "solution": "$$\\begin{flalign*} & a^2 + b^2 = c^2 \\hspace{3em} & \\end{flalign*}$$"
+                "solution": ""
               },
               {
                 "question_id": 5,
