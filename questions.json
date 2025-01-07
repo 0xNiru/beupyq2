@@ -59,8 +59,26 @@
               {
                 "question_id": 6,
                 "question_type": "subjective",
-                "question_text":"Reduce the matrix $\\begin{bmatrix} -1 & 2 & -2 \\\\ 1 & 2 & 1 \\\\ -1 & -1 & 0 \\end{bmatrix}$ to the diagonal form",
+                "question_text":"Reduce the matrix $\\begin{bmatrix} -1 & 2 & -2 \\\\ 1 & 2 & 1 \\\\ -1 & -1 & 0 \\end{bmatrix}$ to the diagonal form $$[\\7\\Marks, 2018\\]",
                 "solution":""
+              },
+              {
+                "question_id": 7,
+                "question_type": "subjective",
+                "question_text": "find the eigen values and eigen vectors of the matrix $\\begin{bmatrix} -2 & 2 & -3 \\\\ 2 & 1 & -6 \\\\ -1 & -2 & 0 \\end{bmatrix}$ $$[\\7\\Marks, 2018\\]",
+                "solution": ""
+              },
+              {
+                "question_id": 8,
+                "question_type": "subjective",
+                "question_text": "For what values of k , the equations $$x + y = 1$$ $$2x + y + 4z = k$$ $$4x + y + 10z = k^2$$ have a solution ? Solve them completely in each case. $$[\\7\\Marks, 2018\\]",
+                "solution": ""
+              },
+              {
+                "question_id": 9,
+                "question_type": "subjective",
+                "question_text": "Let t be a linear transformation from $\\mathbf{R^2}$ into $\\mathbf{R^3}$, where T_x = A_x , A = $\\begin{bmatrix} 2 & 1 \\\\ 1 & -1 \\\\ 3 & 2\\end{bmatrix}$ and x = ( x \\; y)^T. Find ker(T), ran(T) and their dimension $$[\\7\\Marks, 2018\\]",
+                "solution": ""
               }
             ]
           }
