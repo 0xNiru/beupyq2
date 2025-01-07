@@ -83,13 +83,20 @@
               {
                 "question_id": 10,
                 "question_type": "subjective",
-                "question_text": "Let $V$ be the set of all ordered (x , y), where x , y are real numbers . Let $\\mathbf{a} = (x_1 , y_1) and \\mathbf{b} = (x_2 , y_2)$ be two elements in $V$. Define the addition as $$ \\mathbf{a} + \\mathbf{b} = (x_1, y_1) + (x_2 + y_2) = (2x_1 - 3x_2, y_1-y_2)$$ and the scalar multiplication as $\\alpha(x_1 , y_1) = (\\alpha x_1 / 3, \\alpha y_1 /3)$. Check whether $V$ is a vector space or not. Explain the reason.",
+                "question_text": "Let $V$ be the set of all ordered (x , y), where x , y are real numbers . Let $\\mathbf{a} = (x_1 , y_1) and \\mathbf{b} = (x_2 , y_2)$ be two elements in $V$. Define the addition as $$ \\mathbf{a} + \\mathbf{b} = (x_1, y_1) + (x_2 + y_2) = (2x_1 - 3x_2, y_1-y_2)$$ and the scalar multiplication as $\\alpha(x_1 , y_1) = (\\alpha x_1 / 3, \\alpha y_1 /3)$. Check whether $V$ is a vector space or not. Explain the reason. $$[\\ 7 Marks, 2018\\ ]$$",
                 "solution":""
               },
               {
                 "question_id": 11,
                 "question_type": "subjective",
-                "question_text":" Let $T: \\mathbf{R^3} \\rightarrow \\mathbf{R^4}$ be a linear transformation defined by $$T\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\begin{pmatrix} x+y \\\\ z+y \\\\ x+z \\\\ x+y+z \\end{pmatrix}.$$ Find the matrix representation of $T$ with respect to the order basis $$ X = \\begin{Bmatrix} \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix},\\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix} \\end{Bmatrix} in \\;\\mathbf{R^3} and$$ $$Y = \\begin{Bmatrix} \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\\\ 1 \\end{pmatrix}, \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\\\ 1 \\end{pmatrix}, \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\\\ 1 \\end{pmatrix}, \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 0 \\end{pmatrix} \\end{Bmatrix} in\\; \\mathbf{R^4}.$$ "
+                "question_text":" Let $T: \\mathbf{R^3} \\rightarrow \\mathbf{R^4}$ be a linear transformation defined by $$T\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\begin{pmatrix} x+y \\\\ z+y \\\\ x+z \\\\ x+y+z \\end{pmatrix}.$$ Find the matrix representation of $T$ with respect to the order basis $$ X = \\begin{Bmatrix} \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix},\\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix} \\end{Bmatrix} in \\;\\mathbf{R^3} and$$ $$Y = \\begin{Bmatrix} \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\\\ 1 \\end{pmatrix}, \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\\\ 1 \\end{pmatrix}, \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\\\ 1 \\end{pmatrix}, \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 0 \\end{pmatrix} \\end{Bmatrix} in\\; \\mathbf{R^4}.$$  $$[\\ 7 Marks, 2018\\ ]$$",
+                "solution": ""
+              },
+              {
+                "question_id": 12,
+                "question_type": "subjective",
+                "question_text": "State and prove the rank-nullity theorem. $$[\\ 7 Marks, 2018\\ ]$$",
+                "solution": ""
               }
             ]
           }
