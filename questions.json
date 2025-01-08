@@ -129,6 +129,13 @@
                 ],
                 "correct_answer": 0,
                 "solution": ""
+              },
+              {
+                "question_id": 16,
+                "question_type": "numerical",
+                "question_text": "find the rank of the matrix $\\begin{bmatrix} 2 & 3 & -1 & -1 \\\\ 1 & -1 & -2 & -4 \\\\ 3 & 1 & 3 & -2 \\\\ 3 & 1 & 3 & -2 \\\\ 6 & 3 & 0 & -7 \\end{bmatrix}$",
+                "solution":""
+                
               }
             ]
           }
