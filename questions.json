@@ -97,6 +97,38 @@
                 "question_type": "subjective",
                 "question_text": "State and prove the rank-nullity theorem. $$[\\ 7 Marks, 2018\\ ]$$",
                 "solution": ""
+              },
+              {
+                "question_id": 13,
+                "question_type": "objective",
+                "question_text": "If the eigen values of the matrix A $\\begin{bmatrix} -2 & 2 & -3 \\\\ 2 & 1 & -6 \\\\ -1 & -2 & 0 \\end{bmatrix}$ is -3, then the eigenvalues of adj A will be",
+                "options" : [
+                  "$-1/3$",
+                  "$-1/5$",
+                  "$-1/15$",
+                  "$-3$"
+                ],
+                "correct_answer": 0,
+                "solution": ""
+              },
+              {
+                "question_id": 14,
+                "question_type": "subjective",
+                "question_text": "Write down the quadratic forms corresponding to the given matrix A = $\\begin{bmatrix} 2 & 4 & 5 \\\\ 4 & 3 & 1 \\\\ 5 & 1 & 1 \\end{bmatrix}$",
+                "solution": ""
+              },
+              {
+                "question_id": 15,
+                "question_type":"objective",
+                "question_text": "The dimension of the vector space of all real numbers $\\mathbR$ over the field of rational numbers is",
+                "options": [
+                  "1",
+                  "2",
+                  "3", 
+                  "None of the above"
+                ],
+                "correct_answer": 0,
+                "solution": ""
               }
             ]
           }
