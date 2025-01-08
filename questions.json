@@ -120,7 +120,7 @@
               {
                 "question_id": 15,
                 "question_type":"objective",
-                "question_text": "The dimension of the vector space of all real numbers $\\mathbR$ over the field of rational numbers is",
+                "question_text": "The dimension of the vector space of all real numbers $\\mathbf{R}$ over the field of rational numbers is",
                 "options": [
                   "1",
                   "2",
