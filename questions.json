@@ -133,9 +133,16 @@
               {
                 "question_id": 16,
                 "question_type": "numerical",
-                "question_text": "find the rank of the matrix $\\begin{bmatrix} 2 & 3 & -1 & -1 \\\\ 1 & -1 & -2 & -4 \\\\ 3 & 1 & 3 & -2 \\\\ 3 & 1 & 3 & -2 \\\\ 6 & 3 & 0 & -7 \\end{bmatrix}$",
+                "question_text": "Find the rank of the matrix $\\begin{bmatrix} 2 & 3 & -1 & -1 \\\\ 1 & -1 & -2 & -4 \\\\ 3 & 1 & 3 & -2 \\\\ 3 & 1 & 3 & -2 \\\\ 6 & 3 & 0 & -7 \\end{bmatrix}$",
+                "correct_answer": 3,
                 "solution":""
                 
+              },
+              {
+                "question_id": 17,
+                "question_type":"subjective",
+                "question_text": "Find the characteristics equation of the matrix A = $\\beginmatrix{2 & 1 & 1 \\\\ 0 & 1 & 0 \\\\ 1 & 1 & 2 \\end{bmatrix} and hence, find the matrix represented by $A^8 - 5A^7 + 7A^6 - 3A^5 + A^4 - 5A^3 + 8A^2 - 2A + I$",
+                "solution": ""
               }
             ]
           }
