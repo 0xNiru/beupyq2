@@ -133,7 +133,7 @@
               {
                 "question_id": 16,
                 "question_type": "numerical",
-                "question_text": "Find the rank of the matrix $\\begin{bmatrix} 2 & 3 & -1 & -1 \\\\ 1 & -1 & -2 & -4 \\\\ 3 & 1 & 3 & -2 \\\\ 3 & 1 & 3 & -2 \\\\ 6 & 3 & 0 & -7 \\end{bmatrix}$",
+                "question_text": "Find the Rank of the matrix $\\begin{bmatrix} 2 & 3 & -1 & -1 \\\\ 1 & -1 & -2 & -4 \\\\ 3 & 1 & 3 & -2 \\\\ 3 & 1 & 3 & -2 \\\\ 6 & 3 & 0 & -7 \\end{bmatrix}$",
                 "correct_answer": 3,
                 "solution":""
                 
