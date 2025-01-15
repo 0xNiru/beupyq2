@@ -59,7 +59,7 @@
               {
                 "question_id": 6,
                 "question_type": "subjective",
-                "question_text":"Reduce the matrix $\\begin{bmatrix} -1 & 2 & -2 \\\\ 1 & 2 & 1 \\\\ -1 & -1 & 0 \\end{bmatrix}$ to the diagonal form $$[\\ 7 Marks, 2018\\ ]$$",
+                "question_text":"Reduce the Matrix $\\begin{bmatrix} -1 & 2 & -2 \\\\ 1 & 2 & 1 \\\\ -1 & -1 & 0 \\end{bmatrix}$ to the diagonal form $$[\\ 7 Marks, 2018\\ ]$$",
                 "solution":""
               },
               {
