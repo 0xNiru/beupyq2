@@ -1,4 +1,4 @@
-### [Check it Live ✨](https://okayniraj.me/)
+### [Check it Live ✨](https://beupyq.okayniraj.me/)
  
 
 
