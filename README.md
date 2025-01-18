@@ -1,4 +1,4 @@
-### [Check it Live ✨](https://beupyq.vercel.app/)
+### [Check it Live ✨](https://okayniraj.me/)
  
 
 
