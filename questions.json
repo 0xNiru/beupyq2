@@ -54,7 +54,7 @@
                 "question_id": 5,
                 "question_type":"subjective",
                 "question_text":"Define Basis. $$[\\ 2 Marks, 2018\\ ]$$",
-                "solution": ""
+                "solution": "A basis of a vector space V over field F is a set of vectors in V that satisfies two key properties :-  (i) Linearly Independent : No Vector in the set can be expressed as a linear combination of the others. (ii) Spanning the space : Any vector in V can be expressed as a linear combination of the vectors in the basis."
               },
               {
                 "question_id": 6,
