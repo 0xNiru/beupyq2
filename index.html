@@ -22,115 +22,92 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body class="text-gray-200">
-    <!-- Removed class="bg-gradient-to-br from-gray-900 to-gray-800" -->
-
-  <!-- OLD Navbar -->
+<body class="flex flex-col min-h-screen text-gray-200">
+  <!-- Navbar -->
   <nav class="w-full p-4 text-white flex shadow-xl">
     <div>     
       <button id="home-btn" class="text-lg font-bold text-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-          </svg>          
-        </button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>          
+      </button>
     </div> 
-
     <div>
-        <a href="https://beupyq.okayniraj.me/About/">
-      <p style="text-align:right; font-family: 'Merriweather', serif; font-weight:300;">About Us</p> </a>
+      <a href="https://beupyq.okayniraj.me/About/">
+        <p style="text-align:right; font-family: 'Merriweather', serif; font-weight:300;">About Us</p> 
+      </a>
     </div>
+  </nav>
 
-  </nav> 
-
-    <!-- Updated Navbar 
-<nav class="w-full p-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white flex justify-between items-center shadow-xl">
-    <button id="home-btn" class="text-lg font-bold text-gray-200">Home</button>
-    <button id="about-btn" class="text-lg text-gray-200">About Us</button>
-</nav> -->
-
-  <!-- Selection Section -->
-  <div class="container mx-auto px-4 py-6 mt-10" id="selection-section">
-      <div class="mb-6">
-        <h1 class="text-lg text-yellow-500 mx-auto" style="font-family: 'Poppins', sans-serif; font-weight: 800;">BEU chapterwise PYQs</h1>
-          
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Selection Section -->
+    <div class="container mx-auto px-4 py-6 mt-10" id="selection-section">
+        <div class="mb-6">
+          <h1 class="text-lg text-yellow-500 mx-auto" style="font-family: 'Poppins', sans-serif; font-weight: 800;">BEU chapterwise PYQs</h1>
           <label for="branch" class="block text-lg font-semibold text-teal-100 mt-6" style="font-family: 'Poppins', sans-serif; font-weight: 500;">BRANCH :</label>
           <select id="branch" class="w-full px-4 py-2 border rounded-md focus:outline-none bg-teal-100 text-black border-gray-600 mt-2">
               <option value="" disabled selected> --select branch-- </option>
           </select>
-      </div>
-      <div class="mb-6">
-          <label for="semester" class="block text-lg text-teal-100" style="font-family: 'Poppins', sans-serif; font-weight: 500;">SEMESTER :</label>
-          <select id="semester" class="w-full px-4 py-2 border rounded-md focus:outline-none bg-teal-100 text-black border-gray-600 mt-2" disabled>
-              <option value="" disabled selected> --select semester-- </option>
-          </select>
-      </div>
-      <button 
-  id="get-pyqs-btn" 
-  class="w-full text-white py-2 rounded-md disabled:opacity-50 mt-4 hover:brightness-90" 
-  style="background-color: #2C2A7E; font-family: 'Poppins', sans-serif; font-weight: 800;" disabled> GET PYQs </button>
-  </div>
-
-  <!-- Chapter List Section -->
-  <div id="chapters-section" class="hidden mt-6">
-    <div class="flex mb-4">
-        <button id="back-to-home" class="text-gray-200 hover:text-gray-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-        </button>
-        
+        </div>
+        <div class="mb-6">
+            <label for="semester" class="block text-lg text-teal-100" style="font-family: 'Poppins', sans-serif; font-weight: 500;">SEMESTER :</label>
+            <select id="semester" class="w-full px-4 py-2 border rounded-md focus:outline-none bg-teal-100 text-black border-gray-600 mt-2" disabled>
+                <option value="" disabled selected> --select semester-- </option>
+            </select>
+        </div>
+        <button id="get-pyqs-btn" class="w-full text-white py-2 rounded-md disabled:opacity-50 mt-4 hover:brightness-90" style="background-color: #2C2A7E; font-family: 'Poppins', sans-serif; font-weight: 800;" disabled> GET PYQs </button>
     </div>
-      <p class="text-lg text-yellow-500 mb-4" style="font-family: 'Poppins', sans-serif; font-weight: 800;">Select Chapter :</p>
-      <ul id="chapters-list" class="space-y-2" style="font-family: 'Merriweather', serif; font-weight: 300;">
-          <!-- Chapters will be dynamically added here -->
-      </ul>
-  </div>
 
-  <!-- Questions Section -->
-<div id="questions-section" class="hidden mt-6 space-y-4">
-  <!-- Add these to your questions-section div -->
-    <div class="flex mb-4">
-        <button id="back-to-chapters" class="text-gray-200 hover:text-gray-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-        </button>
-        
+    <!-- Chapter List Section -->
+    <div id="chapters-section" class="hidden mt-6">
+      <div class="flex mb-4">
+          <button id="back-to-home" class="text-gray-200 hover:text-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+          </button>
+      </div>
+        <p class="text-lg text-yellow-500 mb-4" style="font-family: 'Poppins', sans-serif; font-weight: 800;">Select Chapter :</p>
+        <ul id="chapters-list" class="space-y-2" style="font-family: 'Merriweather', serif; font-weight: 300;">
+            <!-- Chapters will be dynamically added here -->
+        </ul>
     </div>
-  <!-- Question Progress at Top -->
-  <p id="question-progress" class="text-center text-sm text-gray-300"></p>
-  <div class="bg-gray-800 shadow-xl rounded-lg p-4">
-      <p id="question-text" class="font-medium text-gray-200" style="font-family: 'Roboto', sans-serif;"></p>
-      <button id="show-solution-btn" class="mt-4 bg-green-700 hover:bg-green-800 text-white px-3 py-1.5 rounded-md focus:outline-none">
-          Show Solution
-      </button>
-      <p id="solution" class="hidden mt-4 bg-gray-700 p-4 rounded-md text-gray-300"></p>
-  </div>
-<div class="flex justify-between mt-4 text-gray-300 w-full">
-  <button id="prev-btn" class="bg-gray-700 hover:bg-gray-800 text-sm px-4 py-1.5 rounded-md focus:outline-none" style="font-family: 'Poppins', sans-serif; font-weight: 800;" disabled>Prev</button>
-  <button id="next-btn" class="bg-gray-700 hover:bg-gray-800 text-sm px-4 py-1.5 rounded-md focus:outline-none" style="font-family: 'Poppins', sans-serif; font-weight: 800;" disabled>Next</button>
-</div>
 
-</div>
+    <!-- Questions Section -->
+    <div id="questions-section" class="hidden mt-6 space-y-4">
+      <div class="flex mb-4">
+          <button id="back-to-chapters" class="text-gray-200 hover:text-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+          </button>
+      </div>
+      <p id="question-progress" class="text-center text-sm text-gray-300"></p>
+      <div class="bg-gray-800 shadow-xl rounded-lg p-4">
+          <p id="question-text" class="font-medium text-gray-200" style="font-family: 'Roboto', sans-serif;"></p>
+          <button id="show-solution-btn" class="mt-4 bg-green-700 hover:bg-green-800 text-white px-3 py-1.5 rounded-md focus:outline-none">
+              Show Solution
+          </button>
+          <p id="solution" class="hidden mt-4 bg-gray-700 p-4 rounded-md text-gray-300"></p>
+      </div>
+      <div class="flex justify-between mt-4 text-gray-300 w-full">
+        <button id="prev-btn" class="bg-gray-700 hover:bg-gray-800 text-sm px-4 py-1.5 rounded-md focus:outline-none" style="font-family: 'Poppins', sans-serif; font-weight: 800;" disabled>Prev</button>
+        <button id="next-btn" class="bg-gray-700 hover:bg-gray-800 text-sm px-4 py-1.5 rounded-md focus:outline-none" style="font-family: 'Poppins', sans-serif; font-weight: 800;" disabled>Next</button>
+      </div>
+    </div>
+  </main>
 
-
-
-<div class="flex justify-center items-center text-sm text-gray-500">
-  <a href="https://t.me/NemesisRoy" target="_blank" class="flex items-center space-x-1 hover:text-gray-700">
-      <span class="material-icons">bug_report</span> 
-      <span>Send Feedback</span>
-  </a>
-</div>
-
-
-
-
-
-<h1 class="text-sm text-gray-500 mt-2">&copy; 2025 Nemesis Roy. All Rights Reserved</h1>
-
-
-
-
+  <!-- Footer -->
+  <footer class="w-full text-center py-4 mt-10 text-gray-500">
+    <div class="flex justify-center items-center space-x-2">
+        <a href="https://t.me/NemesisRoy" target="_blank" class="flex items-center space-x-1 hover:text-gray-400">
+            <span class="material-icons">bug_report</span> 
+            <span>Send Feedback</span>
+        </a>
+    </div>
+    <p class="text-sm mt-2">&copy; 2025 Nemesis Roy. All Rights Reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 

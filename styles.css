@@ -9,7 +9,7 @@ body {
 
 /* Navbar styling */
 nav {
-  background: #030b1f; /* Darker theme navbar */
+  background: #020520; /* Darker theme navbar */
   padding: 1.5rem;
   color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Stronger shadow */
@@ -173,8 +173,7 @@ button:hover, button:focus {
 
 /* Footer Styling (optional) */
 footer {
-  background-color: #2A4365;
-  color: #e2e8f0;
+  background-color: #020520;
   padding: 1rem;
   text-align: center;
 }
