@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEU CPYQs - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        body {
+            background-color: #1F2937; /* Tailwind's gray-800 */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen text-gray-200">
+  <div class="flex items-center justify-center h-screen">
+    <form id="signup-form" class="p-6 rounded shadow-md bg-white">
+      <h2 class="text-2xl font-bold mb-4">Sign Up</h2>
+      <input type="email" id="email" placeholder="Email" class="w-full border rounded p-2 mb-4" required>
+      <input type="password" id="password" placeholder="Password" class="w-full border rounded p-2 mb-4" required>
+      <button type="submit" class="w-full bg-green-500 text-white py-2 rounded">Sign Up</button>
+      <p class="mt-4 text-center">Already have an account? <a href="login.html" class="text-blue-400">Login</a></p>
+    </form>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjgJP2VKCnpPWWsB-jPgmwmwbXecK08Q0",
+      authDomain: "beupyq.firebaseapp.com",
+      projectId: "beupyq",
+      storageBucket: "beupyq.firebasestorage.app",
+      messagingSenderId: "108487799051",
+      appId: "1:108487799051:web:2607436919d1e6ab81720e"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Handle signup form submission
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Create a new user with Firebase
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        alert('Sign up successful! You can now log in.');
+        window.location.href = 'login.html'; // Redirect to login page after successful signup
+      } catch (error) {
+        alert('Sign up failed: ' + error.message);
+      }
+    });
+  </script>
+</body>
+
+</html> 

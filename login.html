@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEU CPYQs - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="login.css"> <!-- Link to a new CSS file for login styles -->
+    <style>
+        body {
+            background-color: #1F2937; /* Tailwind's gray-800 */
+        }
+        #login-form {
+            background-color: transparent; /* Make the card background transparent */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for distinction */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen text-gray-200">
+  <!-- Login Section -->
+  <div id="login-section" class="flex items-center justify-center h-screen">
+    <form id="login-form" class="p-6 rounded shadow-md">
+      <h2 class="text-2xl font-bold mb-4 text-white">Login</h2>
+      <button type="button" id="google-login" class="w-full bg-blue-500 text-white py-2 rounded mb-4 flex items-center justify-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_Logo_2015.png" alt="Google Icon" class="h-5 mr-2">Login with Google
+      </button>
+      <p class="text-center text-white">or</p>
+      <input type="email" id="email" placeholder="Email" class="w-full border rounded p-2 mb-4" required>
+      <input type="password" id="password" placeholder="Password" class="w-full border rounded p-2 mb-4" required>
+      <button type="submit" class="w-full bg-green-500 text-white py-2 rounded">Login</button>
+      <div class="flex justify-between mt-4">
+        <a href="forgot-password.html" class="text-blue-400">Forgot Password?</a>
+        <a href="signup.html" class="text-blue-400">Sign Up</a>
+      </div>
+    </form>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjgJP2VKCnpPWWsB-jPgmwmwbXecK08Q0",
+      authDomain: "beupyq.firebaseapp.com",
+      projectId: "beupyq",
+      storageBucket: "beupyq.firebasestorage.app",
+      messagingSenderId: "108487799051",
+      appId: "1:108487799051:web:2607436919d1e6ab81720e",
+      measurementId: "G-6JLK9BWM2F"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    // Handle login form submission
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Authenticate with Firebase
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        // Redirect to main content page after successful login
+        window.location.href = 'index.html';
+      } catch (error) {
+        alert('Login failed: ' + error.message);
+      }
+    });
+
+    // Google login functionality
+    document.getElementById('google-login').addEventListener('click', async () => {
+      const provider = new GoogleAuthProvider();
+      try {
+        await signInWithPopup(auth, provider);
+        // Redirect to main content page after successful login
+        window.location.href = 'index.html';
+      } catch (error) {
+        alert('Login failed: ' + error.message);
+      }
+    });
+  </script>
+</body>
+
+</html> 
