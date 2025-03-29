@@ -37,6 +37,11 @@
         <p style="text-align:right; font-family: 'Merriweather', serif; font-weight:300;">About Us</p> 
       </a>
     </div>
+    <button id="logout-btn" class="text-gray-200 hover:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+    </button>
   </nav>
 
   <!-- Main Content -->
@@ -78,7 +83,7 @@
     <div id="questions-section" class="hidden mt-6 space-y-4">
       <div class="flex mb-4">
           <button id="back-to-chapters" class="text-gray-200 hover:text-gray-300">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
           </button>
@@ -110,6 +115,19 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="module">
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+
+    document.getElementById('logout-btn').addEventListener('click', async () => {
+        const auth = getAuth();
+        try {
+            await signOut(auth);
+            window.location.href = 'login.html';
+        } catch (error) {
+            console.error('Error signing out:', error);
+        }
+    });
+  </script>
 
 </body>
 

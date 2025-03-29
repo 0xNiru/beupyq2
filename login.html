@@ -4,37 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>BEU CPYQs - Login</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="login.css"> <!-- Link to a new CSS file for login styles -->
     <style>
         body {
-            background-color: #1F2937; /* Tailwind's gray-800 */
+            background-color: #020520; /* Match the dark theme from styles.css */
         }
         #login-form {
-            background-color: transparent; /* Make the card background transparent */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for distinction */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            background-color: rgba(17, 24, 39, 0.4); /* Slightly transparent dark background */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            max-width: 400px;
+            width: 90%;
+        }
+        #google-login {
+            background-color: #2C2A7E; /* Match the button color from index.html */
+            transition: all 0.3s ease;
+        }
+        #google-login:hover {
+            filter: brightness(90%);
+        }
+        .submit-btn {
+            background-color: #2C2A7E;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            filter: brightness(90%);
+        }
+        input {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .link-hover {
+            transition: all 0.3s ease;
+        }
+        .link-hover:hover {
+            color: #93C5FD; /* Lighter blue on hover */
         }
     </style>
 </head>
 
 <body class="flex flex-col min-h-screen text-gray-200">
   <!-- Login Section -->
-  <div id="login-section" class="flex items-center justify-center h-screen">
-    <form id="login-form" class="p-6 rounded shadow-md">
-      <h2 class="text-2xl font-bold mb-4 text-white">Login</h2>
-      <button type="button" id="google-login" class="w-full bg-blue-500 text-white py-2 rounded mb-4 flex items-center justify-center">
-        <img src="https://i.postimg.cc/L5kNJgQy/icons8-google-48.png" alt="Google" class="h-5 mr-2">Login with Google
+  <div id="login-section" class="flex items-center justify-center h-screen px-4">
+    <form id="login-form" class="p-8 rounded-lg shadow-2xl">
+      <h2 class="text-2xl font-bold mb-6 text-yellow-500 text-center" style="font-family: 'Poppins', sans-serif;">Login</h2>
+      <button type="button" id="google-login" class="w-full text-white py-3 rounded-md mb-6 flex items-center justify-center shadow-lg">
+        <img src="https://i.postimg.cc/L5kNJgQy/icons8-google-48.png" alt="Google" class="h-5 mr-2">
+        <span style="font-family: 'Poppins', sans-serif;">Login with Google</span>
       </button>
-      <p class="text-center text-white">or</p>
-      <input type="email" id="email" placeholder="Email" class="w-full border rounded p-2 mb-4" required>
-      <input type="password" id="password" placeholder="Password" class="w-full border rounded p-2 mb-4" required>
-      <button type="submit" class="w-full bg-green-500 text-white py-2 rounded">Login</button>
-      <div class="flex justify-between mt-4">
-        <a href="forgot-password.html" class="text-blue-400">Forgot Password?</a>
-        <a href="signup.html" class="text-blue-400">Sign Up</a>
+      <div class="relative flex items-center justify-center mb-6">
+        <div class="border-t border-gray-600 flex-grow"></div>
+        <p class="text-center text-gray-400 px-4">or</p>
+        <div class="border-t border-gray-600 flex-grow"></div>
+      </div>
+      <input type="email" id="email" placeholder="Email" class="w-full border rounded-md p-3 mb-4 bg-opacity-10" required>
+      <input type="password" id="password" placeholder="Password" class="w-full border rounded-md p-3 mb-6 bg-opacity-10" required>
+      <button type="submit" class="submit-btn w-full text-white py-3 rounded-md shadow-lg mb-6" style="font-family: 'Poppins', sans-serif;">Login</button>
+      <div class="flex justify-between mt-2 text-sm">
+        <a href="forgot-password.html" class="text-blue-400 link-hover">Forgot Password?</a>
+        <a href="signup.html" class="text-blue-400 link-hover">Sign Up</a>
       </div>
     </form>
   </div>
@@ -91,4 +134,4 @@
   </script>
 </body>
 
-</html> 
+</html>

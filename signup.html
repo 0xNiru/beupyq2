@@ -4,63 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>BEU CPYQs - Sign Up</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #1F2937; /* Tailwind's gray-800 */
+            background-color: #020520;
+        }
+
+        #signup-form {
+            background-color: rgba(17, 24, 39, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        #google-signup {
+            background-color: #2C2A7E;
+            transition: all 0.3s ease;
+        }
+
+        #google-signup:hover {
+            filter: brightness(90%);
+        }
+
+        .submit-btn {
+            background-color: #2C2A7E;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            filter: brightness(90%);
+        }
+
+        input {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .link-hover {
+            transition: all 0.3s ease;
+        }
+
+        .link-hover:hover {
+            color: #93C5FD;
         }
     </style>
 </head>
 
 <body class="flex flex-col min-h-screen text-gray-200">
-  <div class="flex items-center justify-center h-screen">
-    <form id="signup-form" class="p-6 rounded shadow-md bg-white">
-      <h2 class="text-2xl font-bold mb-4">Sign Up</h2>
-      <input type="email" id="email" placeholder="Email" class="w-full border rounded p-2 mb-4" required>
-      <input type="password" id="password" placeholder="Password" class="w-full border rounded p-2 mb-4" required>
-      <button type="submit" class="w-full bg-green-500 text-white py-2 rounded">Sign Up</button>
-      <p class="mt-4 text-center">Already have an account? <a href="login.html" class="text-blue-400">Login</a></p>
-    </form>
-  </div>
+    <div class="flex items-center justify-center h-screen px-4">
+        <form id="signup-form" class="p-8 rounded-lg shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6 text-yellow-500 text-center" style="font-family: 'Poppins', sans-serif;">Create Account</h2>
+            <button type="button" id="google-signup" class="w-full text-white py-3 rounded-md mb-6 flex items-center justify-center shadow-lg">
+                <img src="https://i.postimg.cc/L5kNJgQy/icons8-google-48.png" alt="Google" class="h-5 mr-2">
+                <span style="font-family: 'Poppins', sans-serif;">Sign up with Google</span>
+            </button>
+            <div class="relative flex items-center justify-center mb-6">
+                <div class="border-t border-gray-600 flex-grow"></div>
+                <p class="text-center text-gray-400 px-4">or</p>
+                <div class="border-t border-gray-600 flex-grow"></div>
+            </div>
+            <input type="text" id="name" placeholder="Full Name" class="w-full border rounded-md p-3 mb-4 bg-opacity-10" required>
+            <input type="email" id="email" placeholder="Email" class="w-full border rounded-md p-3 mb-4 bg-opacity-10" required>
+            <input type="password" id="password" placeholder="Password" class="w-full border rounded-md p-3 mb-4 bg-opacity-10" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" class="w-full border rounded-md p-3 mb-6 bg-opacity-10" required>
+            <button type="submit" class="submit-btn w-full text-white py-3 rounded-md shadow-lg mb-6" style="font-family: 'Poppins', sans-serif;">Sign Up</button>
+            <div class="text-center">
+                <p class="text-gray-400">Already have an account? <a href="login.html" class="text-blue-400 link-hover">Login</a></p>
+            </div>
+        </form>
+    </div>
 
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
 
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCjgJP2VKCnpPWWsB-jPgmwmwbXecK08Q0",
-      authDomain: "beupyq.firebaseapp.com",
-      projectId: "beupyq",
-      storageBucket: "beupyq.firebasestorage.app",
-      messagingSenderId: "108487799051",
-      appId: "1:108487799051:web:2607436919d1e6ab81720e"
-    };
+        const firebaseConfig = {
+            apiKey: "AIzaSyCjgJP2VKCnpPWWsB-jPgmwmwbXecK08Q0",
+            authDomain: "beupyq.firebaseapp.com",
+            projectId: "beupyq",
+            storageBucket: "beupyq.firebasestorage.app",
+            messagingSenderId: "108487799051",
+            appId: "1:108487799051:web:2607436919d1e6ab81720e"
+        };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
 
-    // Handle signup form submission
-    document.getElementById('signup-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
+        document.getElementById('signup-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
 
-      // Create a new user with Firebase
-      try {
-        await createUserWithEmailAndPassword(auth, email, password);
-        alert('Sign up successful! You can now log in.');
-        window.location.href = 'login.html'; // Redirect to login page after successful signup
-      } catch (error) {
-        alert('Sign up failed: ' + error.message);
-      }
-    });
-  </script>
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            try {
+                await createUserWithEmailAndPassword(auth, email, password);
+                window.location.href = 'index.html';
+            } catch (error) {
+                alert('Sign up failed: ' + error.message);
+            }
+        });
+
+        document.getElementById('google-signup').addEventListener('click', async () => {
+            const provider = new GoogleAuthProvider();
+            try {
+                await signInWithPopup(auth, provider);
+                window.location.href = 'index.html';
+            } catch (error) {
+                alert('Sign up failed: ' + error.message);
+            }
+        });
+    </script>
 </body>
 
-</html> 
+</html>
