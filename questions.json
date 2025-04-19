@@ -191,6 +191,51 @@
                 ],
                 "correct_answer": 0,
                 "solution": ""
+              },
+              {
+                "question_id": 5,
+                "question_type":"objective",
+                "question_text": "Radius of convergence of \\( \\sum_{n=1}^{\\infty} \\frac{x^n}{\\sqrt{n}} \\) is",
+                "options":[
+                  "1", 
+                  "0", 
+                  "-1", 
+                  "$\\infty$"
+                ],
+                "correct_answer": 1,
+                "solution": ""
+              },
+              {
+                "question_id": 6,
+                "question_type":"subjective",
+                "question_text":"Define half-range sine and cosine series.",
+                "solution":""
+              },
+              {
+                "question_id": 7,
+                "question_type":"objective",
+                "question_text":"$\\lim_{x \\to 2} \\frac{1}{(x-2)^2}$ is",
+                "options":[
+                  "+ $\\infty$",
+                  "- $\\infty$",
+                  "Exists finitely",
+                  "Does not exist"
+                ],
+                "correct_answer": 0,
+                "solution":""
+              },
+              {
+                "question_id": 8,
+                "question_type":"objective",
+                "question_text": "$if \\; u = \\sin^-1(\\frac{y}{x}) + \\tan^-1\\frac{y}{x},\\; then \\; x\\frac{\\partial u}{\\partial x} + y\\frac{\\partial u}{\\partial y} = $",
+                "options":[
+                  "$\\frac{2x}{\\sqrt{y^2 - x^2}}$",
+                  "- $\\frac{2xy}{x^2 + y^2}$",
+                  "0",
+                  "None of these"
+                ],
+                "correct_answer": 2,
+                "solution": ""
               }
             ]
           }
