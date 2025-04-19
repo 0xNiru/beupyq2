@@ -6,6 +6,7 @@ let quizData;
 let currentChapterIndex = 0;
 let currentQuestionIndex = 0;
 let currentQuestions = [];
+let selectedMode = null; // 'pdf' or 'mock'
 
 fetch("questions.json")
     .then(response => response.json())
@@ -29,10 +30,50 @@ const homeBtn = document.getElementById("home-btn");
 const backToChapters = document.getElementById("back-to-chapters");
 const backToHome = document.getElementById("back-to-home");
 
+// Add these near the top of your script.js file after your variable declarations
+document.addEventListener('DOMContentLoaded', () => {
+    // Year-wise card click handler
+    document.getElementById('year-wise-card').addEventListener('click', () => {
+        console.log('Year-wise card clicked'); // Debug log
+        document.getElementById('selection-section').classList.add('hidden');
+        document.getElementById('year-wise-section').classList.remove('hidden');
+    });
+
+    // Chapter-wise card click handler
+    document.getElementById('chapter-wise-card').addEventListener('click', () => {
+        console.log('Chapter-wise card clicked'); // Debug log
+        document.getElementById('selection-section').classList.add('hidden');
+        document.getElementById('chapter-wise-section').classList.remove('hidden');
+    });
+
+    // Back to main menu button handler
+    document.getElementById('back-to-main').addEventListener('click', () => {
+        document.getElementById('year-wise-section').classList.add('hidden');
+        document.getElementById('chapter-wise-section').classList.add('hidden');
+        document.getElementById('selection-section').classList.remove('hidden');
+    });
+
+    // Home button handler
+    document.getElementById('home-btn').addEventListener('click', () => {
+        document.getElementById('year-wise-section').classList.add('hidden');
+        document.getElementById('chapter-wise-section').classList.add('hidden');
+        document.getElementById('chapters-section').classList.add('hidden');
+        document.getElementById('questions-section').classList.add('hidden');
+        document.getElementById('selection-section').classList.remove('hidden');
+    });
+});
+
 // Add this to your existing script module in index.html
 document.getElementById('chapter-wise-card').addEventListener('click', () => {
     document.getElementById('selection-section').classList.add('hidden');
     document.getElementById('chapter-wise-section').classList.remove('hidden');
+});
+
+// Replace the existing year-wise card event listener with this:
+document.getElementById('year-wise-card').addEventListener('click', () => {
+    document.getElementById('selection-section').classList.add('hidden');
+    document.getElementById('year-wise-section').classList.remove('hidden');
+    document.getElementById('chapter-wise-section').classList.add('hidden');
 });
 
 // Add event listeners for back buttons
@@ -46,13 +87,63 @@ backToHome.addEventListener("click", () => {
     document.getElementById("selection-section").classList.remove("hidden");
 });
 
+// Add this with your other event listeners
+document.getElementById('back-to-main').addEventListener('click', () => {
+    document.getElementById('year-wise-section').classList.add('hidden');
+    document.getElementById('selection-section').classList.remove('hidden');
+});
+
 // Modify your existing home button click handler
 homeBtn.addEventListener("click", () => {
     document.getElementById("chapter-wise-section").classList.add("hidden");
     document.getElementById("chapters-section").classList.add("hidden");
     document.getElementById("questions-section").classList.add("hidden");
+    document.getElementById("year-wise-section").classList.add("hidden");
     document.getElementById("selection-section").classList.remove("hidden");
 });
+
+// Add these event listeners for PDF and Mock Test cards
+document.getElementById('pdf-format-card').addEventListener('click', () => {
+    selectedMode = 'pdf';
+    document.getElementById('year-wise-section').classList.add('hidden');
+    document.getElementById('branch-selection-section').classList.remove('hidden');
+});
+
+document.getElementById('mock-test-card').addEventListener('click', () => {
+    selectedMode = 'mock';
+    document.getElementById('year-wise-section').classList.add('hidden');
+    document.getElementById('branch-selection-section').classList.remove('hidden');
+});
+
+// Add back button functionality for branch selection
+document.getElementById('back-to-year-wise').addEventListener('click', () => {
+    document.getElementById('branch-selection-section').classList.add('hidden');
+    document.getElementById('year-wise-section').classList.remove('hidden');
+});
+
+// Add branch selection handler
+document.querySelectorAll('.branch-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const branch = card.dataset.branch;
+        if (selectedMode === 'pdf') {
+            handlePDFSelection(branch);
+        } else if (selectedMode === 'mock') {
+            handleMockTestSelection(branch);
+        }
+    });
+});
+
+function handlePDFSelection(branch) {
+    // TODO: Implement PDF handling for the selected branch
+    console.log(`PDF format selected for ${branch}`);
+    // You can add your PDF download logic here
+}
+
+function handleMockTestSelection(branch) {
+    // TODO: Implement Mock Test handling for the selected branch
+    console.log(`Mock Test selected for ${branch}`);
+    // You can add your mock test logic here
+}
 
 function populateBranchDropdown() {
     const branches = Object.keys(quizData.branches);

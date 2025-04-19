@@ -67,7 +67,7 @@
         
         <div class="flex justify-center items-center gap-8">
             <!-- Year-wise Card -->
-            <div class="bg-gray-800 rounded-lg p-6 w-64 hover:bg-gray-700 transition-all duration-300 cursor-pointer shadow-xl border border-gray-700">
+            <div id="year-wise-card" class="bg-gray-800 rounded-lg p-6 w-64 hover:bg-gray-700 transition-all duration-300 cursor-pointer shadow-xl border border-gray-700">
                 <div class="flex flex-col items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -87,6 +87,118 @@
                     <p class="text-gray-400 text-sm text-center">Access questions organized by chapters</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Year-wise Section -->
+    <div id="year-wise-section" class="container mx-auto px-4 py-6 mt-10 hidden">
+        <div class="mb-12">
+            <h1 class="text-2xl text-yellow-500 text-center mb-8" style="font-family: 'Poppins', sans-serif; font-weight: 800;">
+                Year Wise Previous Year Questions
+            </h1>
+            
+            <div class="flex justify-center items-center gap-8">
+                <!-- PDF Card -->
+                <div id="pdf-format-card" class="bg-gray-800 rounded-lg p-6 w-64 hover:bg-gray-700 transition-all duration-300 cursor-pointer shadow-xl border border-gray-700">
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-200 mb-2">PDF Format</h2>
+                        <p class="text-gray-400 text-sm text-center">Download year-wise question papers in PDF format</p>
+                    </div>
+                </div>
+
+                <!-- Mock Test Card -->
+                <div id="mock-test-card" class="bg-gray-800 rounded-lg p-6 w-64 hover:bg-gray-700 transition-all duration-300 cursor-pointer shadow-xl border border-gray-700">
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-200 mb-2">Mock Test</h2>
+                        <p class="text-gray-400 text-sm text-center">Practice with interactive mock tests based on previous years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="flex justify-center mt-6">
+            <button id="back-to-main" class="text-gray-300 hover:text-gray-100 flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                </svg>
+                <span>Back to Main Menu</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Branch Selection Section -->
+    <div id="branch-selection-section" class="container mx-auto px-4 py-6 mt-10 hidden">
+        <h2 class="text-xl text-yellow-500 text-center mb-6" style="font-family: 'Poppins', sans-serif; font-weight: 800;">
+            Select Branch
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <!-- Computer Science Engineering -->
+            <div class="branch-card bg-gray-800 p-6 rounded-lg cursor-pointer hover:bg-gray-700 transition-all duration-300" data-branch="cse">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <h3 class="text-lg font-semibold text-gray-200 text-center">Computer Science Engineering</h3>
+                </div>
+            </div>
+
+            <!-- Electronics and Communication -->
+            <div class="branch-card bg-gray-800 p-6 rounded-lg cursor-pointer hover:bg-gray-700 transition-all duration-300" data-branch="ece">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    </svg>
+                    <h3 class="text-lg font-semibold text-gray-200 text-center">Electronics and Communication</h3>
+                </div>
+            </div>
+
+            <!-- Civil Engineering -->
+            <div class="branch-card bg-gray-800 p-6 rounded-lg cursor-pointer hover:bg-gray-700 transition-all duration-300" data-branch="ce">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    <h3 class="text-lg font-semibold text-gray-200 text-center">Civil Engineering</h3>
+                </div>
+            </div>
+
+            <!-- Electrical Engineering -->
+            <div class="branch-card bg-gray-800 p-6 rounded-lg cursor-pointer hover:bg-gray-700 transition-all duration-300" data-branch="ee">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <h3 class="text-lg font-semibold text-gray-200 text-center">Electrical Engineering</h3>
+                </div>
+            </div>
+
+            <!-- Mechanical Engineering -->
+            <div class="branch-card bg-gray-800 p-6 rounded-lg cursor-pointer hover:bg-gray-700 transition-all duration-300" data-branch="me">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <h3 class="text-lg font-semibold text-gray-200 text-center">Mechanical Engineering</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back button -->
+        <div class="flex justify-center mt-6">
+            <button id="back-to-year-wise" class="text-gray-300 hover:text-gray-100 flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                </svg>
+                <span>Back</span>
+            </button>
         </div>
     </div>
 
