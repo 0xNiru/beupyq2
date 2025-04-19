@@ -24,36 +24,80 @@
 
 <body class="flex flex-col min-h-screen text-gray-200">
   <!-- Navbar -->
-  <nav class="w-full p-4 text-white flex shadow-xl">
-    <div>     
+  <nav class="w-full p-4 text-white flex justify-between items-center shadow-xl">
+    <div class="flex items-center">     
       <button id="home-btn" class="text-lg font-bold text-gray-200">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>          
       </button>
-    </div> 
-    <div>
-      <a href="https://beupyq.okayniraj.me/About/">
-        <p style="text-align:right; font-family: 'Merriweather', serif; font-weight:300;">About Us</p> 
-      </a>
     </div>
-    <button id="logout-btn" class="text-gray-200 hover:text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-        </svg>
-    </button>
+
+    <!-- User Profile Section -->
+    <div class="flex items-center space-x-4">
+      <div id="userProfile" class="flex items-center space-x-2">
+        <img id="userProfilePic" class="w-8 h-8 rounded-full border border-gray-400 hover:border-yellow-500 transition-colors duration-200" alt="Profile" src="default-avatar.png">
+        <span id="userName" class="text-sm hidden md:inline text-gray-300"></span>
+      </div>
+      <div class="relative group">
+        <button id="profileMenu" class="focus:outline-none p-2 hover:bg-gray-700 rounded-full transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 hidden group-hover:block border border-gray-700">
+          <button id="logout-btn" class="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 flex items-center transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+            Sign Out
+          </button>
+        </div>
+      </div>
+    </div>
   </nav>
 
   <!-- Main Content -->
   <main class="flex-grow">
     <!-- Selection Section -->
     <div class="container mx-auto px-4 py-6 mt-10" id="selection-section">
+        <h1 class="text-2xl text-yellow-500 text-center mb-12" style="font-family: 'Poppins', sans-serif; font-weight: 800;">
+            BEU Previous Year Questions
+        </h1>
+        
+        <div class="flex justify-center items-center gap-8">
+            <!-- Year-wise Card -->
+            <div class="bg-gray-800 rounded-lg p-6 w-64 hover:bg-gray-700 transition-all duration-300 cursor-pointer shadow-xl border border-gray-700">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <h2 class="text-xl font-bold text-gray-200 mb-2">Year Wise</h2>
+                    <p class="text-gray-400 text-sm text-center">Access questions organized by examination years</p>
+                </div>
+            </div>
+
+            <!-- Chapter-wise Card -->
+            <div id="chapter-wise-card" class="bg-gray-800 rounded-lg p-6 w-64 hover:bg-gray-700 transition-all duration-300 cursor-pointer shadow-xl border border-gray-700">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    <h2 class="text-xl font-bold text-gray-200 mb-2">Chapter Wise</h2>
+                    <p class="text-gray-400 text-sm text-center">Access questions organized by chapters</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create a new div for chapter-wise content -->
+    <div id="chapter-wise-section" class="container mx-auto px-4 py-6 mt-10 hidden">
         <div class="mb-6">
-          <h1 class="text-lg text-yellow-500 mx-auto" style="font-family: 'Poppins', sans-serif; font-weight: 800;">BEU chapterwise PYQs</h1>
-          <label for="branch" class="block text-lg font-semibold text-teal-100 mt-6" style="font-family: 'Poppins', sans-serif; font-weight: 500;">BRANCH :</label>
-          <select id="branch" class="w-full px-4 py-2 border rounded-md focus:outline-none bg-teal-100 text-black border-gray-600 mt-2">
-              <option value="" disabled selected> --select branch-- </option>
-          </select>
+            <h1 class="text-lg text-yellow-500 mx-auto" style="font-family: 'Poppins', sans-serif; font-weight: 800;">BEU chapterwise PYQs</h1>
+            <label for="branch" class="block text-lg font-semibold text-teal-100 mt-6" style="font-family: 'Poppins', sans-serif; font-weight: 500;">BRANCH :</label>
+            <select id="branch" class="w-full px-4 py-2 border rounded-md focus:outline-none bg-teal-100 text-black border-gray-600 mt-2">
+                <option value="" disabled selected> --select branch-- </option>
+            </select>
         </div>
         <div class="mb-6">
             <label for="semester" class="block text-lg text-teal-100" style="font-family: 'Poppins', sans-serif; font-weight: 500;">SEMESTER :</label>
@@ -116,19 +160,52 @@
 
   <script src="script.js"></script>
   <script type="module">
-    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+    import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
 
-    document.getElementById('logout-btn').addEventListener('click', async () => {
-        const auth = getAuth();
-        try {
-            await signOut(auth);
-            window.location.href = 'login.html';
-        } catch (error) {
-            console.error('Error signing out:', error);
+    // Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjgJP2VKCnpPWWsB-jPgmwmwbXecK08Q0",
+      authDomain: "beupyq.firebaseapp.com",
+      projectId: "beupyq",
+      storageBucket: "beupyq.firebasestorage.app",
+      messagingSenderId: "108487799051",
+      appId: "1:108487799051:web:2607436919d1e6ab81720e"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Handle auth state changes
+    onAuthStateChanged(auth, (user) => {
+      const userProfilePic = document.getElementById('userProfilePic');
+      const userName = document.getElementById('userName');
+
+      if (user) {
+        // Update profile picture
+        if (user.photoURL) {
+          userProfilePic.src = user.photoURL;
         }
+
+        // Update user name
+        userName.textContent = user.displayName || user.email;
+      } else {
+        // Redirect to login if not authenticated
+        window.location.href = 'login.html';
+      }
+    });
+
+    // Handle logout
+    document.getElementById('logout-btn').addEventListener('click', async () => {
+      try {
+        await signOut(auth);
+        window.location.href = 'login.html';
+      } catch (error) {
+        console.error('Error signing out:', error);
+      }
     });
   </script>
-
 </body>
 
 </html>

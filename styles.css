@@ -206,3 +206,24 @@ footer {
   }
 }
 */
+
+/* User Profile Styling */
+#userProfile img {
+  object-fit: cover;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+.group-hover\:block {
+  display: none;
+}
+
+#userProfile {
+  transition: all 0.3s ease;
+}
+
+#userProfile:hover {
+  opacity: 0.8;
+}

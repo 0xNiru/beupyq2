@@ -29,6 +29,11 @@ const homeBtn = document.getElementById("home-btn");
 const backToChapters = document.getElementById("back-to-chapters");
 const backToHome = document.getElementById("back-to-home");
 
+// Add this to your existing script module in index.html
+document.getElementById('chapter-wise-card').addEventListener('click', () => {
+    document.getElementById('selection-section').classList.add('hidden');
+    document.getElementById('chapter-wise-section').classList.remove('hidden');
+});
 
 // Add event listeners for back buttons
 backToChapters.addEventListener("click", () => {
@@ -41,10 +46,12 @@ backToHome.addEventListener("click", () => {
     document.getElementById("selection-section").classList.remove("hidden");
 });
 
+// Modify your existing home button click handler
 homeBtn.addEventListener("click", () => {
+    document.getElementById("chapter-wise-section").classList.add("hidden");
+    document.getElementById("chapters-section").classList.add("hidden");
+    document.getElementById("questions-section").classList.add("hidden");
     document.getElementById("selection-section").classList.remove("hidden");
-    chaptersSection.classList.add("hidden");
-    questionsSection.classList.add("hidden");
 });
 
 function populateBranchDropdown() {
@@ -79,21 +86,24 @@ getPyqsBtn.addEventListener("click", function () {
 function showChapterList(branch, semester) {
     const chapters = Object.keys(quizData.branches[branch].semesters[semester].chapters);
 
+    // Hide selection section first
+    document.getElementById("selection-section").classList.add("hidden");
+    document.getElementById("chapter-wise-section").classList.add("hidden");
+    
+    // Show chapters section and populate
     chaptersSection.classList.remove("hidden");
     chaptersList.innerHTML = '';
 
     chapters.forEach(chapter => {
         const li = document.createElement("li");
         li.textContent = chapter;
-        li.classList.add("p-2", "cursor-pointer", "hover:bg-gray-700", "rounded", "text-gray-200");
+        li.classList.add("p-2", "cursor-pointer", "hover:bg-gray-700", "rounded", "text-gray-200", "mb-2");
         li.addEventListener("click", () => {
             loadQuestions(branch, semester, chapter);
             chaptersSection.classList.add("hidden");
         });
         chaptersList.appendChild(li);
     });
-
-    document.getElementById("selection-section").classList.add("hidden");
 }
 
 function loadQuestions(branch, semester, chapter) {
