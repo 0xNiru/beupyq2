@@ -7,6 +7,8 @@ let currentChapterIndex = 0;
 let currentQuestionIndex = 0;
 let currentQuestions = [];
 let selectedMode = null; // 'pdf' or 'mock'
+let selectedBranch = null;
+let selectedFormat = null; // 'pdf' or 'mock'
 
 fetch("questions.json")
     .then(response => response.json())
@@ -30,7 +32,6 @@ const homeBtn = document.getElementById("home-btn");
 const backToChapters = document.getElementById("back-to-chapters");
 const backToHome = document.getElementById("back-to-home");
 
-// Add these near the top of your script.js file after your variable declarations
 document.addEventListener('DOMContentLoaded', () => {
     // Year-wise card click handler
     document.getElementById('year-wise-card').addEventListener('click', () => {
@@ -61,22 +62,55 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('questions-section').classList.add('hidden');
         document.getElementById('selection-section').classList.remove('hidden');
     });
+
+    // PDF and Mock Test card click handlers
+    document.getElementById('pdf-format-card').addEventListener('click', () => {
+        selectedFormat = 'pdf';
+        document.getElementById('year-wise-section').classList.add('hidden');
+        document.getElementById('branch-selection-section').classList.remove('hidden');
+    });
+
+    document.getElementById('mock-test-card').addEventListener('click', () => {
+        selectedFormat = 'mock';
+        document.getElementById('year-wise-section').classList.add('hidden');
+        document.getElementById('branch-selection-section').classList.remove('hidden');
+    });
+
+    // Branch selection handlers
+    document.querySelectorAll('.branch-card').forEach(card => {
+        card.addEventListener('click', () => {
+            selectedBranch = card.dataset.branch;
+            document.getElementById('branch-selection-section').classList.add('hidden');
+            document.getElementById('semester-selection-section').classList.remove('hidden');
+        });
+    });
+
+    // Semester selection handlers
+    document.querySelectorAll('.semester-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const semester = card.dataset.semester;
+            handleSemesterSelection(selectedBranch, semester, selectedFormat);
+        });
+    });
+
+    // Back button handlers
+    document.getElementById('back-to-branch').addEventListener('click', () => {
+        document.getElementById('semester-selection-section').classList.add('hidden');
+        document.getElementById('branch-selection-section').classList.remove('hidden');
+    });
 });
 
-// Add this to your existing script module in index.html
 document.getElementById('chapter-wise-card').addEventListener('click', () => {
     document.getElementById('selection-section').classList.add('hidden');
     document.getElementById('chapter-wise-section').classList.remove('hidden');
 });
 
-// Replace the existing year-wise card event listener with this:
 document.getElementById('year-wise-card').addEventListener('click', () => {
     document.getElementById('selection-section').classList.add('hidden');
     document.getElementById('year-wise-section').classList.remove('hidden');
     document.getElementById('chapter-wise-section').classList.add('hidden');
 });
 
-// Add event listeners for back buttons
 backToChapters.addEventListener("click", () => {
     questionsSection.classList.add("hidden");
     chaptersSection.classList.remove("hidden");
@@ -87,13 +121,11 @@ backToHome.addEventListener("click", () => {
     document.getElementById("selection-section").classList.remove("hidden");
 });
 
-// Add this with your other event listeners
 document.getElementById('back-to-main').addEventListener('click', () => {
     document.getElementById('year-wise-section').classList.add('hidden');
     document.getElementById('selection-section').classList.remove('hidden');
 });
 
-// Modify your existing home button click handler
 homeBtn.addEventListener("click", () => {
     document.getElementById("chapter-wise-section").classList.add("hidden");
     document.getElementById("chapters-section").classList.add("hidden");
@@ -102,7 +134,6 @@ homeBtn.addEventListener("click", () => {
     document.getElementById("selection-section").classList.remove("hidden");
 });
 
-// Add these event listeners for PDF and Mock Test cards
 document.getElementById('pdf-format-card').addEventListener('click', () => {
     selectedMode = 'pdf';
     document.getElementById('year-wise-section').classList.add('hidden');
@@ -115,13 +146,11 @@ document.getElementById('mock-test-card').addEventListener('click', () => {
     document.getElementById('branch-selection-section').classList.remove('hidden');
 });
 
-// Add back button functionality for branch selection
 document.getElementById('back-to-year-wise').addEventListener('click', () => {
     document.getElementById('branch-selection-section').classList.add('hidden');
     document.getElementById('year-wise-section').classList.remove('hidden');
 });
 
-// Add branch selection handler
 document.querySelectorAll('.branch-card').forEach(card => {
     card.addEventListener('click', () => {
         const branch = card.dataset.branch;
@@ -134,15 +163,15 @@ document.querySelectorAll('.branch-card').forEach(card => {
 });
 
 function handlePDFSelection(branch) {
-    // TODO: Implement PDF handling for the selected branch
     console.log(`PDF format selected for ${branch}`);
-    // You can add your PDF download logic here
 }
 
 function handleMockTestSelection(branch) {
-    // TODO: Implement Mock Test handling for the selected branch
     console.log(`Mock Test selected for ${branch}`);
-    // You can add your mock test logic here
+}
+
+function handleSemesterSelection(branch, semester, format) {
+    console.log(`Selected: ${format} format, ${branch} branch, semester ${semester}`);
 }
 
 function populateBranchDropdown() {
@@ -177,11 +206,9 @@ getPyqsBtn.addEventListener("click", function () {
 function showChapterList(branch, semester) {
     const chapters = Object.keys(quizData.branches[branch].semesters[semester].chapters);
 
-    // Hide selection section first
     document.getElementById("selection-section").classList.add("hidden");
     document.getElementById("chapter-wise-section").classList.add("hidden");
     
-    // Show chapters section and populate
     chaptersSection.classList.remove("hidden");
     chaptersList.innerHTML = '';
 
@@ -216,19 +243,15 @@ function displayQuestion() {
     answerContainer.id = "answer-container";
     answerContainer.className = "mt-4";
 
-    // Clear previous content
     questionContainer.textContent = question.question_text;
     const oldAnswerContainer = document.getElementById("answer-container");
     if (oldAnswerContainer) oldAnswerContainer.remove();
     
-    // Reset solution
     solutionText.classList.add("hidden");
     solutionText.textContent = '';
     
-    // Add new answer container after question text
     questionContainer.parentNode.insertBefore(answerContainer, showSolutionBtn);
 
-    // Handle different question types
     switch(question.question_type) {
         case "objective":
             createObjectiveQuestion(question, answerContainer);
@@ -247,26 +270,23 @@ function displayQuestion() {
             showSolutionBtn.classList.remove("hidden");
     }
 
-    // Update navigation buttons
     prevBtn.disabled = currentQuestionIndex === 0;
     nextBtn.disabled = currentQuestionIndex === currentQuestions.length - 1;
 }
 
 function createObjectiveQuestion(question, container) {
     const optionsContainer = document.createElement("div");
-    // Increased width and changed layout
     optionsContainer.className = "grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 w-full";
     
     question.options.forEach((option, index) => {
         const optionDiv = document.createElement("div");
-        // Made each option a clickable button-like element
         optionDiv.className = "p-4 rounded-lg border border-gray-600 hover:bg-gray-700 cursor-pointer flex items-center";
         
         const radio = document.createElement("input");
         radio.type = "radio";
         radio.name = "question-option";
         radio.value = index;
-        radio.className = "hidden"; // Hide the default radio button
+        radio.className = "hidden";
         
         const customRadio = document.createElement("div");
         customRadio.className = "w-4 h-4 rounded-full border-2 border-blue-500 mr-3 flex items-center justify-center";
@@ -283,7 +303,6 @@ function createObjectiveQuestion(question, container) {
         optionDiv.appendChild(customRadio);
         optionDiv.appendChild(label);
         
-        // Handle option selection
         optionDiv.addEventListener('click', () => {
             document.querySelectorAll('input[name="question-option"]').forEach(r => {
                 r.checked = false;
@@ -316,8 +335,6 @@ function createNumericalQuestion(question, container) {
 }
 
 function createSubjectiveQuestion(container) {
-    // For subjective questions, we only need the show solution button
-    // which is already present in the HTML
     showSolutionBtn.textContent = "Show Solution";
 }
 
@@ -349,7 +366,6 @@ function checkAnswer() {
         }
     }
 
-    // Show result and solution
     solutionText.classList.remove("hidden");
     solutionText.innerHTML = `
         <div class="mb-2 ${isCorrect ? 'text-green-500' : 'text-red-500'}">
@@ -398,5 +414,4 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Add event listener for show solution button
 showSolutionBtn.addEventListener("click", toggleSolution);
